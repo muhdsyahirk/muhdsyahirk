@@ -10,3 +10,56 @@
 html {
   scroll-behavior: smooth;
 }
+/*  */
+/*  */
+/*  */
+body {
+  background-color: var(--black);
+}
+/*  */
+/*  */
+/*  */
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1818;
+  display: flex;
+  justify-content: center;
+
+  .nav-container {
+    width: 50%;
+    margin-top: 10px;
+    padding: 5px 20px 5px 20px;
+    border: 0.2px solid #a9a9a9;
+    border-radius: 15px;
+
+    background: rgba(0, 0, 0, 0.83);
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(2.3px);
+    -webkit-backdrop-filter: blur(2.3px);
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      li {
+        list-style: none;
+
+        &:nth-child(1) {
+          margin-right: auto;
+        }
+
+        a {
+          text-decoration: none;
+          color: var(--white);
+
+          img {
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+}
