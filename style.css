@@ -29,7 +29,7 @@ body {
 /*  */
 /*  */
 /*  */
-nav {
+/* nav {
   position: fixed;
   width: 100%;
   z-index: 1818;
@@ -37,22 +37,24 @@ nav {
   justify-content: center;
 
   .nav-container {
-    width: 50%;
+    width: clamp(700px, 55vw, 1292px);
     margin-top: 10px;
     padding: 5px 20px 5px 20px;
     border: 0.2px solid var(--grey);
     border-radius: 15px;
 
     background: rgba(0, 0, 0, 0.83);
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
     backdrop-filter: blur(2.3px);
     -webkit-backdrop-filter: blur(2.3px);
 
     ul {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 12px;
+
+      .nav-item {
+        display: flex;
+        gap: 12px;
+      }
 
       li {
         list-style: none;
@@ -61,6 +63,9 @@ nav {
           margin-right: auto;
         }
 
+        .nav-burger {
+          display: none;
+        }
         a {
           text-decoration: none;
           color: var(--white);
@@ -82,6 +87,132 @@ nav {
             }
           }
         }
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    .nav-container {
+      width: 70%;
+    }
+  }
+  @media (max-width: 700px) {
+    .nav-container {
+      ul {
+        .nav-item {
+          flex-direction: column;
+        }
+        li {
+          .nav-burger {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+} */
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1818;
+  display: flex;
+  justify-content: center;
+
+  .nav-container {
+    width: clamp(700px, 55vw, 1292px);
+    margin-top: 10px;
+
+    padding: 5px 20px 5px 20px;
+    border: 0.2px solid var(--grey);
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.83);
+    backdrop-filter: blur(2.3px);
+    -webkit-backdrop-filter: blur(2.3px);
+
+    display: flex;
+    align-items: center;
+
+    .nav-img {
+      margin-right: auto;
+      img {
+        width: 30px;
+        border-radius: 50%;
+        /* outline: 1.75px solid var(--red);
+
+        &:hover {
+          outline: 1.75px solid transparent;
+        } */
+      }
+    }
+
+    .nav-burger {
+      display: none;
+      color: var(--white);
+    }
+
+    .nav-item {
+      display: flex;
+      /* align-items: center; */
+      list-style: none;
+      gap: 12px;
+
+      li {
+        a {
+          text-decoration: none;
+          color: var(--white);
+          letter-spacing: 1px;
+          font-weight: bold;
+          transition: color 0.3s;
+
+          &:hover {
+            color: var(--red);
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    .nav-container {
+      width: 70%;
+    }
+  }
+  @media (max-width: 700px) {
+    .nav-container {
+      position: relative;
+
+      .nav-burger {
+        display: block;
+      }
+
+      .nav-item {
+        position: fixed;
+        z-index: 1818;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        top: 120%;
+        left: 0;
+        border: 0.2px solid var(--grey);
+        border-radius: 15px;
+        background: rgba(0, 0, 0, 0.83);
+        backdrop-filter: blur(2.3px);
+        -webkit-backdrop-filter: blur(2.3px);
+        transform: translateY(-125%);
+        opacity: 1;
+        transition: transform 0.5s, opacity 0.5s;
+
+        li {
+          display: flex;
+
+          a {
+            padding: 25px 20px 25px 20px;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+      .nav-item-mobile {
+        transform: translateY(0);
+        opacity: 1;
       }
     }
   }
@@ -223,7 +354,7 @@ nav {
       .about-content {
         /* width: 400px; */
         /* width: 25vw; */
-        width: clamp(255px, 25.5vw, 418px);
+        width: clamp(255px, 25.5vw, 450px);
         /* height: 180px; */
       }
       .about-content-not-empty {
@@ -544,7 +675,8 @@ footer {
   .footer-container {
     margin-top: 2%;
     padding: 18px 0 32px 0;
-    width: 70%;
+    /* width: 60%; */
+    width: clamp(700px, 55vw, 1292px);
     border-top: 1px solid var(--grey);
     display: flex;
     justify-content: space-between;
@@ -552,12 +684,14 @@ footer {
     p {
       color: var(--grey);
       text-align: center;
+      font-size: clamp(14px, 1vw, 17px);
     }
   }
   @media (max-width: 1000px) {
     .footer-container {
+      width: 70%;
       p {
-        font-size: clamp(10px, 1.98vw, 16px);
+        font-size: clamp(10px, 1.98vw, 14px);
       }
     }
   }
