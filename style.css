@@ -29,87 +29,6 @@ body {
 /*  */
 /*  */
 /*  */
-/* nav {
-  position: fixed;
-  width: 100%;
-  z-index: 1818;
-  display: flex;
-  justify-content: center;
-
-  .nav-container {
-    width: clamp(700px, 55vw, 1292px);
-    margin-top: 10px;
-    padding: 5px 20px 5px 20px;
-    border: 0.2px solid var(--grey);
-    border-radius: 15px;
-
-    background: rgba(0, 0, 0, 0.83);
-    backdrop-filter: blur(2.3px);
-    -webkit-backdrop-filter: blur(2.3px);
-
-    ul {
-      display: flex;
-      align-items: center;
-
-      .nav-item {
-        display: flex;
-        gap: 12px;
-      }
-
-      li {
-        list-style: none;
-
-        &:nth-of-type(1) {
-          margin-right: auto;
-        }
-
-        .nav-burger {
-          display: none;
-        }
-        a {
-          text-decoration: none;
-          color: var(--white);
-          letter-spacing: 1px;
-          font-weight: bold;
-          transition: color 0.3s;
-
-          &:hover {
-            color: var(--red);
-          }
-
-          img {
-            width: 30px;
-            border-radius: 50%;
-            outline: 1.75px solid var(--red);
-
-            &:hover {
-              outline: 1.75px solid transparent;
-            }
-          }
-        }
-      }
-    }
-  }
-  @media (max-width: 1000px) {
-    .nav-container {
-      width: 70%;
-    }
-  }
-  @media (max-width: 700px) {
-    .nav-container {
-      ul {
-        .nav-item {
-          flex-direction: column;
-        }
-        li {
-          .nav-burger {
-            display: block;
-          }
-        }
-      }
-    }
-  }
-} */
 nav {
   position: fixed;
   width: 100%;
@@ -151,7 +70,6 @@ nav {
 
     .nav-item {
       display: flex;
-      /* align-items: center; */
       list-style: none;
       gap: 12px;
 
