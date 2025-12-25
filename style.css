@@ -165,7 +165,7 @@ nav {
   @media (max-width: 700px) {
     .main-container {
       flex-direction: column;
-      padding: 1vw;
+      margin: 1.5vw;
       gap: 5vw;
 
       .main-img {
@@ -197,18 +197,19 @@ nav {
 
   .about-container {
     /* margin: 60px; */
-    margin: clamp(5px, 4vw, 60px);
+    margin: clamp(20px, 4vw, 60px);
     display: flex;
     flex-direction: column;
 
     .about-row {
       display: flex;
       /* gap: 1.2vw; */
-      gap: clamp(4px, 1.2vw, 18px);
+      gap: clamp(12px, 1.2vw, 18px);
 
       &:nth-child(2) {
         .about-content-not-empty {
           p {
+            text-align: right;
             text-align-last: right;
           }
         }
@@ -217,7 +218,7 @@ nav {
       .about-content {
         /* width: 400px; */
         /* width: 25vw; */
-        width: clamp(50px, 25vw, 418px);
+        width: clamp(247px, 25vw, 418px);
         /* height: 180px; */
       }
       .about-content-not-empty {
@@ -252,15 +253,52 @@ nav {
         align-items: center;
 
         .about-content-mid-circle {
-          width: 15px;
-          height: 15px;
+          /* width: 15px; */
+          width: clamp(7px, 1vw, 15px);
+          /* height: 15px; */
+          height: clamp(7px, 1vw, 15px);
           border-radius: 100%;
           background-color: var(--white);
         }
         .about-content-mid-line {
           height: 100%;
-          width: 3px;
+          /* width: 3px; */
+          width: clamp(1px, 0.2vw, 3px);
           background-color: var(--white);
+        }
+      }
+    }
+  }
+  @media (max-width: 580px) {
+    .about-container {
+      margin: 8vw 1.5vw;
+
+      .about-row {
+        &:nth-child(2) {
+          .about-content-not-empty {
+            p {
+              text-align: justify;
+              text-align-last: left;
+            }
+          }
+        }
+
+        &:last-child {
+          .about-content-not-empty {
+            padding-bottom: 0;
+          }
+        }
+
+        .about-content-not-empty {
+          order: 2;
+          padding-bottom: 4vw;
+        }
+
+        .about-content-empty {
+          display: none;
+        }
+
+        .about-content-mid {
         }
       }
     }
