@@ -115,11 +115,16 @@ nav {
         backdrop-filter: blur(2.3px);
         -webkit-backdrop-filter: blur(2.3px);
         transform: translateY(-125%);
-        opacity: 1;
+        opacity: 0;
         transition: transform 0.5s, opacity 0.5s;
 
         li {
           display: flex;
+          border-bottom: 1px solid var(--grey);
+
+          &:last-child {
+            border-bottom: 0;
+          }
 
           a {
             padding: 25px 20px 25px 20px;
@@ -229,9 +234,15 @@ nav {
         border-bottom: 1px solid var(--red);
       }
       .main-content {
-        width: 85%;
+        width: 65%;
         transform: translateX(0);
-        text-align: center;
+        /* text-align: center; */
+        /* border: 1px solid var(--red); */
+        padding: 10px 5px;
+        /* border-radius: 15px;
+        background: rgba(0, 0, 0, 0.83);
+        backdrop-filter: blur(2.3px);
+        -webkit-backdrop-filter: blur(2.3px); */
 
         .main-content-link {
           ul {
@@ -278,6 +289,9 @@ nav {
       .about-content-not-empty {
         /* border: 1px solid white; */
         color: var(--white);
+        display: flex;
+        flex-direction: column;
+        gap: clamp(8px, 0.5vw, 12px);
 
         p:nth-of-type(1) {
           /* font-size: 30px; */
@@ -285,15 +299,17 @@ nav {
           font-size: clamp(20px, 2vw, 33px);
           font-weight: bold;
           /* margin-bottom: 0.5vw; */
-          margin-bottom: clamp(4px, 0.5vw, 12px);
+          /* margin-bottom: clamp(4px, 0.5vw, 12px); */
         }
         p:nth-of-type(2) {
           /* font-size: 22px; */
           /* font-size: 1.3vw; */
           font-size: clamp(15px, 1.3vw, 23px);
           /* margin-bottom: 0.5vw; */
-          margin-bottom: clamp(4px, 0.5vw, 12px);
+          /* margin-bottom: clamp(4px, 0.5vw, 12px); */
           text-align: justify;
+          /* line-height: 25px; */
+          line-height: clamp(20px, 1.7vw, 30px);
         }
         p:nth-of-type(3) {
           /* font-size: 18px; */
@@ -310,9 +326,9 @@ nav {
 
         .about-content-mid-circle {
           /* width: 15px; */
-          width: clamp(7px, 1vw, 15px);
+          width: clamp(7px, 1vw, 14px);
           /* height: 15px; */
-          height: clamp(7px, 1vw, 15px);
+          height: clamp(7px, 1vw, 14px);
           border-radius: 100%;
           background-color: var(--white);
         }
@@ -348,6 +364,10 @@ nav {
         .about-content-not-empty {
           order: 2;
           padding-bottom: 5vw;
+
+          p:nth-of-type(2) {
+            line-height: 20px;
+          }
         }
 
         .about-content-empty {
@@ -476,6 +496,7 @@ nav {
             p {
               font-size: clamp(15px, 1.1vw, 19px);
               line-height: clamp(18px, 1.3vw, 23px);
+              text-align: justify;
               /* line-height: 20px; */
             }
           }
@@ -525,28 +546,46 @@ nav {
         gap: clamp(10px, 1vw, 20px);
 
         li {
+          border: 1px solid var(--red);
+          border-radius: 10px;
+          position: relative;
+          overflow: hidden;
+
+          &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 0%;
+            top: 0;
+            left: -10%;
+            transform: skew(45deg);
+            background-color: var(--red);
+            z-index: -1;
+            transition: all 1s;
+          }
+
+          &:hover::before {
+            width: 100%;
+          }
+
+          &:hover a {
+            color: var(--black);
+          }
+
           a {
             display: flex;
             align-items: center;
             gap: clamp(10px, 1vw, 25px);
             color: var(--white);
             text-decoration: none;
-            padding: clamp(8px, 1vw, 25px);
-            border: 1px solid var(--red);
-            /* font-size: 1.2vw; */
+            padding: clamp(10px, 1vw, 23px);
             font-size: clamp(15px, 1.2vw, 23px);
+            transition: color 0.5s;
 
             .blog-link {
               margin-left: auto;
-              transform: translateX(-85%);
-              opacity: 0;
-              transition: 0.5s;
-            }
-            &:hover {
-              .blog-link {
-                transform: translateX(0);
-                opacity: 1;
-              }
+              color: var(--grey);
+              transition: 0.15s;
             }
           }
         }
@@ -578,6 +617,13 @@ nav {
 
       .blog-content {
         width: 100%;
+
+        @media (max-width: 530px) {
+          ul li a .blog-link {
+            width: 4ch;
+            text-align: right;
+          }
+        }
       }
     }
   }
