@@ -236,18 +236,18 @@ nav {
       .main-content {
         width: 62%;
         transform: translateX(0);
-        text-align: center;
-        border: 1px solid var(--red);
+        /* text-align: center; */
         padding: 15px 8px;
-        border-radius: 15px;
-        background: rgba(0, 0, 0, 0.83);
+        /* border: 1px solid var(--red);
+        border-radius: 15px; */
+        /* background: rgba(0, 0, 0, 0.83);
         backdrop-filter: blur(2.3px);
-        -webkit-backdrop-filter: blur(2.3px);
+        -webkit-backdrop-filter: blur(2.3px); */
         line-height: clamp(22px, 6vw, 30px);
 
         .main-content-link {
           ul {
-            justify-content: center;
+            /* justify-content: center; */
           }
         }
       }
@@ -301,12 +301,12 @@ nav {
         color: var(--white);
         display: flex;
         flex-direction: column;
-        gap: clamp(8px, 0.5vw, 12px);
+        gap: clamp(8px, 0.5vw, 10px);
 
         p:nth-of-type(1) {
           /* font-size: 30px; */
           /* font-size: 2vw; */
-          font-size: clamp(20px, 2vw, 33px);
+          font-size: clamp(20px, 2vw, 31px);
           font-weight: bold;
           /* margin-bottom: 0.5vw; */
           /* margin-bottom: clamp(4px, 0.5vw, 12px); */
@@ -351,9 +351,9 @@ nav {
       }
     }
   }
-  @media (max-width: 580px) {
+  @media (max-width: 637px) {
     .about-container {
-      margin: 8vw 1.5vw;
+      margin: 8vw 1.5vw 1.5vw 1.5vw;
 
       .about-row {
         &:nth-child(2) {
@@ -373,7 +373,7 @@ nav {
 
         .about-content-not-empty {
           order: 2;
-          padding-bottom: 5vw;
+          padding-bottom: 6vw;
 
           p:nth-of-type(2) {
             line-height: 20px;
@@ -394,11 +394,11 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: clamp(10px, 2vw, 20px);
+  margin: 35px 0;
 
   .skill-container {
-    width: 80%;
-    outline: 1px solid green;
+    width: 90%;
 
     &[data-animated="true"] {
       overflow: hidden;
@@ -406,13 +406,13 @@ nav {
     &[data-animated="true"] .skill-list {
       flex-wrap: nowrap;
     }
-    &[data-animated="true"] .scroller-inner-right {
+    &[data-animated="true"] .scroller-inner {
       width: fit-content;
-      animation: scroll-right 20s linear infinite;
+      animation: scroll var(--scroll-duration, 40s)
+        var(--scroll-direction, forwards) linear infinite;
     }
-    &[data-animated="true"] .scroller-inner-left {
-      width: fit-content;
-      animation: scroll-left 20s linear infinite;
+    &[data-direction="right"] {
+      --scroll-direction: reverse;
     }
   }
 
@@ -420,23 +420,23 @@ nav {
     display: flex;
     list-style: none;
     align-items: center;
-    gap: 20px;
+    gap: clamp(10px, 1vw, 20px);
     flex-wrap: wrap;
 
     li {
       img {
-        width: 200px;
+        width: clamp(100px, 10vw, 200px);
         font-size: 200px;
       }
     }
   }
 }
-@keyframes scroll-right {
-  to {
-    transform: translateX(50%);
+@media (max-width: 900px) {
+  .skill {
+    margin: 8vw 0;
   }
 }
-@keyframes scroll-left {
+@keyframes scroll {
   to {
     transform: translateX(-50%);
   }
@@ -444,94 +444,16 @@ nav {
 /*  */
 /*  */
 /*  */
-/* .project {
-  .project-container {
-    margin: 1.5vw clamp(7px, 10vw, 300px);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    row-gap: clamp(25px, 1vw, 25px);
-    column-gap: clamp(25px, 3vw, 75px);
-
-    .project-row {
-      display: flex;
-      flex-direction: column;
-      gap: clamp(8px, 0.8vw, 20px);
-      padding: 1vw;
-
-      .project-container-title {
-        p {
-          color: var(--white);
-          font-weight: bold;
-          font-size: clamp(21px, 2vw, 33px);
-          text-align: center;
-        }
-      }
-      .project-container-content {
-        display: flex;
-        gap: clamp(8px, 1.5vw, 37.8px);
-        justify-content: center;
-        flex-wrap: wrap;
-
-        .project-p {
-          height: clamp(300px, 25vw, 450px);
-          width: clamp(220px, 19vw, 330px);
-          padding: clamp(10px, 1vw, 16px);
-          background-color: var(--dark-grey);
-          display: flex;
-          flex-direction: column;
-          gap: clamp(2px, 0.3vw, 5px);
-          color: var(--white);
-
-          .p-res {
-            iframe {
-              width: 100%;
-              height: clamp(123.75px, 10.5vw, 185.63px);
-            }
-            img {
-              width: 100%;
-            }
-          }
-          .p-title {
-            p {
-              font-size: clamp(16px, 1.3vw, 23px);
-              font-weight: bold;
-            }
-          }
-          .p-desc {
-            p {
-              font-size: clamp(15px, 1.1vw, 19px);
-              line-height: clamp(18px, 1.3vw, 23px);
-            }
-          }
-          .p-link {
-            margin-top: auto;
-            a {
-              font-size: clamp(15px, 1.1vw, 19px);
-              color: var(--white);
-              text-decoration: none;
-            }
-          }
-        }
-      }
-    }
-  }
-} */
-
 .project {
+  display: flex;
+  justify-content: center;
+
   .project-container {
-    margin: 1.5vw clamp(7px, 10vw, 300px);
+    margin: 1.5vw clamp(7px, 10vw, 200px);
+    width: 70%;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
-    /* flex-wrap: wrap; */
-    /* gap: 3vw; */
-    /* row-gap: 1vw; */
-    /* row-gap: clamp(25px, 1vw, 25px); */
-    /* column-gap: 3vw; */
-    /* column-gap: clamp(25px, 3vw, 75px); */
-    /* gap: clamp(25px, 1vw, 25px); */
     gap: clamp(8px, 1.5vw, 37.8px);
 
     .project-title {
@@ -547,11 +469,11 @@ nav {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: clamp(8px, 1.5vw, 37.8px);
+      gap: clamp(10px, 1.5vw, 37.8px);
 
       .project-p {
-        height: clamp(300px, 25vw, 450px);
-        width: clamp(220px, 19vw, 330px);
+        height: clamp(330px, 25vw, 450px);
+        width: clamp(255px, 19vw, 330px);
         /* flex: 1 1 0; */
         padding: clamp(10px, 1vw, 16px);
         background-color: var(--dark-grey);
@@ -596,6 +518,21 @@ nav {
             color: var(--white);
             text-decoration: none;
           }
+        }
+      }
+    }
+  }
+  @media (max-width: 1100px) {
+    .project-container {
+      margin: 1.5vw 1.5vw;
+      width: 90%;
+    }
+  }
+  @media (max-width: 450px) {
+    .project-container {
+      .project-content {
+        .project-p {
+          width: 100%;
         }
       }
     }
