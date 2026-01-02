@@ -275,6 +275,17 @@ nav {
     display: flex;
     flex-direction: column;
 
+    .about-title {
+      margin-bottom: clamp(20px, 3vw, 40px);
+
+      p {
+        font-size: clamp(21px, 2vw, 33px);
+        color: var(--white);
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+
     .about-row {
       display: flex;
       gap: clamp(12px, 1.2vw, 18px);
@@ -342,6 +353,12 @@ nav {
     .about-container {
       margin: 8vw 1.5vw 1.5vw 1.5vw;
 
+      .about-title {
+        p {
+          text-align: left;
+        }
+      }
+
       .about-row {
         &:nth-child(odd) {
           .about-content-not-empty {
@@ -404,7 +421,7 @@ nav {
     display: flex;
     list-style: none;
     align-items: center;
-    gap: clamp(10px, 1vw, 20px);
+    gap: clamp(10px, 2vw, 30px);
     flex-wrap: wrap;
 
     li {
@@ -438,7 +455,7 @@ nav {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: clamp(8px, 1.5vw, 37.8px);
+    gap: clamp(9px, 1.5vw, 37.8px);
 
     .project-title {
       p {
@@ -453,18 +470,17 @@ nav {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: clamp(10px, 1.5vw, 37.8px);
+      gap: clamp(12px, 1.5vw, 37.8px);
 
       .project-p {
-        height: clamp(330px, 25vw, 450px);
-        width: clamp(255px, 19vw, 330px);
-        /* flex: 1 1 0; */
-        padding: clamp(10px, 1vw, 16px);
+        height: clamp(355px, 26.5vw, 470px);
+        width: clamp(280px, 20.5vw, 355px);
         background-color: var(--dark-grey);
         display: flex;
         flex-direction: column;
         gap: clamp(8px, 1vw, 10px);
         color: var(--white);
+        text-decoration: none;
 
         .p-res {
           iframe {
@@ -474,6 +490,13 @@ nav {
           img {
             width: 100%;
           }
+        }
+        .p-content {
+          padding: 0 clamp(10px, 1vw, 16px) clamp(10px, 1vw, 16px);
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
         }
         .p-title {
           p {
@@ -490,34 +513,54 @@ nav {
         .p-desc {
           p {
             font-size: clamp(15px, 1.1vw, 19px);
-            line-height: clamp(18px, 1.3vw, 23px);
+            line-height: clamp(20px, 1.3vw, 23px);
             /* text-align: justify; */
             /* line-height: 20px; */
           }
         }
-        .p-link {
+        .p-arrow {
           margin-top: auto;
-          a {
-            font-size: clamp(15px, 1.1vw, 19px);
-            color: var(--white);
-            text-decoration: none;
-          }
+          text-align: right;
+          font-size: clamp(15px, 1.1vw, 19px);
+          opacity: 0;
+          transform: translateX(-30%);
+          transition: opacity 0.5s, transform 0.5s, color 0.5s;
+        }
+        &:hover .p-arrow {
+          opacity: 1;
+          transform: translateX(-5%);
+          color: var(--red);
         }
       }
+    }
+  }
+  @media (1100px < width < 1270px) {
+    .project-container {
+      margin: clamp(20px, 4vw, 60px) 1.5vw;
+      width: 90%;
     }
   }
   @media (max-width: 1100px) {
     .project-container {
       margin: 1.5vw 1.5vw;
       width: 90%;
+
+      .project-content {
+        .project-p {
+          .p-arrow {
+            opacity: 1;
+            transform: translateX(-5%);
+          }
+        }
+      }
     }
   }
   @media (max-width: 450px) {
     .project-container {
       .project-content {
         .project-p {
-          width: 100%;
-          height: clamp(350px, 100vw, 380px);
+          /* width: 100%; */
+          /* height: clamp(350px, 100vw, 380px); */
         }
       }
     }
