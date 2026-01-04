@@ -3,7 +3,9 @@ import { marked } from "https://cdn.jsdelivr.net/npm/marked/+esm";
 const params = new URLSearchParams(window.location.search);
 const post = params.get("post");
 
+const miniBlog = document.querySelector(".mini-blog");
 const blogContent = document.getElementById("mini-blog-content");
+const underConstruction = document.querySelector(".under-construction");
 
 const posts = {
   wifi: "./posts/wifi.md",
@@ -13,15 +15,25 @@ const posts = {
 };
 
 if (!post || !posts[post]) {
-  blogContent.innerHTML = "<h2>Blog Under Construction</h2>";
+  underConstruction.style.display = "flex";
+  underConstruction.innerHTML =
+    "<h2>Sorry,<br>Blog Under Construction.<br>Come back later!</h2>";
 } else {
   fetch(posts[post])
-    .then((res) => res.text())
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Post not ready");
+      }
+      return res.text();
+    })
     .then((md) => {
+      miniBlog.style.display = "flex";
       blogContent.innerHTML = marked.parse(md);
     })
     .catch((err) => {
-      blogContent.innerHTML = "<h2>Error loading post</h2>";
-      console.log(err);
+      underConstruction.style.display = "flex";
+      underConstruction.innerHTML =
+        "<h2>Sorry,<br>Blog Under Construction.<br>Come back later!</h2>";
+      console.warn(err.message);
     });
 }

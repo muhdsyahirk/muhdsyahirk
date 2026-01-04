@@ -1,5 +1,11 @@
 # How to Steal Someone Else’s Wi-Fi
 
+_5 min read · August 18, 2025 · by muhdsyahirk_
+
+---
+
+## Entry Log
+
 In this mini-blog, I will be guiding you steps-by-steps on how to steal someone else’s Wi-Fi. By stealing someone else’s Wi-Fi, I mean, we connect to that Wi-Fi and then we can use it for browsing internet or any other activities that require internet connection. My method, however, is an outdated method since I believe that many routers are currently using a more secure way in securing their Wi-Fi, but, I also believe that some of the Wi-Fi owners didn’t really use something strong to secure their Wi-Fi (i.e. weak Wi-Fi password).
 
 Requirements:
@@ -16,9 +22,11 @@ Tools covered:
 4. Wordlist
 5. Crunch
 
-WARNING: Since I still consider myself a beginner, some of you might think that this tutorial is trash, moreover, my English is not that great. So, don’t read or follow if you value your time.
+> **WARNING** Since I still consider myself a beginner, some of you might think that this tutorial is trash, moreover, my English is not that great. So, don’t read or follow if you value your time.
 
-DISCLAIMER: This mini-blog’s content is intended solely for educational purposes. I take no responsibility for any abuse of this material, nor do I support unlawful activity.
+> **DISCLAIMER** This mini-blog’s content is intended solely for educational purposes. I take no responsibility for any abuse of this material, nor do I support unlawful activity.
+
+---
 
 ## Step 1: Search for Wi-Fi around us
 
@@ -41,19 +49,16 @@ By writing this command, we will then see this output:
 
 ![Airodump-ng.png](./img/wifi/Airodump-ng.png)
 
-BSSID = MAC address
-
-PWR = From my understanding, it’s like ‘ping’ = the lower, the better the connection (ignore ‘-’)
-
-Data = The higher, the busier the network
-
-CH = Channel
-
-ENC = Security protocol
-
-ESSID = Wi-Fi name
+- BSSID = MAC address
+- PWR = From my understanding, it’s like ‘ping’ = the lower, the better the connection (ignore ‘-’)
+- Data = The higher, the busier the network
+- CH = Channel
+- ENC = Security protocol
+- ESSID = Wi-Fi name
 
 From here, we have identified active Wi-Fi around us. We can then choose which one do we want to steal from. Keep in mind that the ENC & CH is important, the BSSID will be used a lot later and all of the tutorials here require monitor mode.
+
+---
 
 ## Step 2: Gaining Access to the chosen Wi-Fi
 
@@ -191,6 +196,8 @@ Output:
 
 Bomba! The password is on ‘WPA PSK’, which is ‘UAURWSXR’.
 
+---
+
 ## Limitations
 
 ### WEP
@@ -203,7 +210,9 @@ Have you ever heard someone says “imagine using brute force in the big 2025”
 
 ### WPS
 
-If the victim disable WPS feature, you can do nothing.
+If the owner disable WPS feature, you can do nothing.
+
+---
 
 ## How to secure your Wi-Fi
 
@@ -225,6 +234,8 @@ If the victim disable WPS feature, you can do nothing.
 
 - If your router has WPS feature, you either need to disable it or enable PBC (Push Button Configuration) for the easy connection.
 
-## -
+---
+
+## Session Terminated
 
 Well, thank you for staying with me until the end of this post. I know that this guide is trash, but I hope you learned something from it, see you later!
