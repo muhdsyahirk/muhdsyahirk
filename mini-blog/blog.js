@@ -14,6 +14,12 @@ const posts = {
   netsecnotes: "./posts/netsecnotes.md",
 };
 
+const postTitles = {
+  wifi: "How to Steal Someone Else's Wi-Fi",
+  hack: "How to Hack Someone From 0 (Same Network)",
+  detection: "Basic Network Attacks Detection using Python & Scapy",
+};
+
 if (!post || !posts[post]) {
   underConstruction.style.display = "flex";
   underConstruction.innerHTML =
@@ -27,6 +33,7 @@ if (!post || !posts[post]) {
       return res.text();
     })
     .then((md) => {
+      document.title = `${postTitles[post]} | Muhd Syahir`;
       miniBlog.style.display = "flex";
       blogContent.innerHTML = marked.parse(md);
     })

@@ -1,6 +1,6 @@
 # How to Steal Someone Else’s Wi-Fi
 
-_5 min read · August 18, 2025 · by muhdsyahirk_
+_15 min read · August 18, 2025 · by muhdsyahirk_
 
 ---
 

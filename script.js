@@ -90,5 +90,31 @@ const loader = document.getElementById("loader");
 window.addEventListener("load", () => {
   setTimeout(() => {
     loader.classList.add("loader-hidden");
+    scrollInitialiser();
+
+    setTimeout(() => {
+      loader.style.display = "none";
+      // scrollInitialiser();
+    }, 1000);
   }, 500);
 });
+
+// SCROLL ANIMATION
+function scrollInitialiser() {
+  const scrollElements = document.querySelectorAll("[data-scroll-class]");
+
+  const scrollObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const className = entry.target.dataset.scrollClass;
+          entry.target.classList.add(className);
+          scrollObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  scrollElements.forEach((el) => scrollObserver.observe(el));
+}
