@@ -8,13 +8,14 @@ const blogContent = document.getElementById("mini-blog-content");
 const underConstruction = document.querySelector(".under-construction");
 
 const posts = {
+  first: "./posts/first.md",
   wifi: "./posts/wifi.md",
   hack: "./posts/hack.md",
   detection: "./posts/detection.md",
-  netsecnotes: "./posts/netsecnotes.md",
 };
 
 const postTitles = {
+  first: "My First Mini-Blog",
   wifi: "How to Steal Someone Else's Wi-Fi",
   hack: "How to Hack Someone From 0 (Same Network)",
   detection: "Basic Network Attacks Detection using Python & Scapy",

@@ -380,7 +380,7 @@ nav {
           line-height: clamp(20px, 1.7vw, 30px);
           transform: translateY(15%);
           opacity: 0;
-          transition: transform 0.5s, opacity 0.5s;
+          transition: transform 1s, opacity 1s;
 
           &.scroll-simple {
             transform: translateY(0);
@@ -462,6 +462,10 @@ nav {
             P:nth-of-type(2) {
               text-align: left;
               transform: translateX(-5%);
+
+              &.scroll-simple {
+                transform: translateX(0);
+              }
             }
           }
         }
@@ -589,6 +593,14 @@ nav {
         gap: clamp(8px, 1vw, 10px);
         color: var(--white);
         text-decoration: none;
+        opacity: 0;
+        transform: translateY(15%);
+        transition: transform 0.5s, opacity 0.5s;
+
+        &.scroll-simple {
+          opacity: 1;
+          transform: translateY(0);
+        }
 
         .p-res {
           iframe {
@@ -711,6 +723,14 @@ nav {
           border-radius: 10px;
           position: relative;
           overflow: hidden;
+          opacity: 0;
+          transform: translateX(-5%);
+          transition: transform 0.5s, opacity 0.5s;
+
+          &.scroll-simple {
+            opacity: 1;
+            transform: translateX(0);
+          }
 
           &::before {
             content: "";
