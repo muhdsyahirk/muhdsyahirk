@@ -865,7 +865,6 @@ footer {
   color: var(--white);
   display: none;
   justify-content: center;
-  min-height: 100vh;
 
   #mini-blog-content {
     margin: 60px 0 20px;

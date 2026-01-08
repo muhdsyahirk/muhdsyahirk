@@ -198,19 +198,19 @@ Bomba! The password is on ‘WPA PSK’, which is ‘UAURWSXR’.
 
 ---
 
-## Limitations
+## Limitations of these attacks
 
 ### WEP
 
-WEP is considered obsolete nowadays, thus no router is using it anymore.
+WEP is considered obsolete nowadays, thus no router is using it anymore. If you ever find a network using WEP, then GO HACK IT!
 
 ### WPA & WPA2
 
-Have you ever heard someone says “imagine using brute force in the big 2025”? Yea, brute force is irrelevant nowadays because of majority of the Wi-Fi owners are asked to enter a strong password for their Wi-Fi.
+Have you ever heard someone say, “imagine using brute force in the big 2025”? Yea, brute force is irrelevant nowadays because most Wi-Fi owners are forced by their ISP or router setup wizard to use a strong password.
 
 ### WPS
 
-If the owner disable WPS feature, you can do nothing.
+If the owner disables WPS feature, there's nothing you can really do. WPS attacks rely on WPS PIN mechanism being enabled. Once it's turned off, that attack path is completely closed.
 
 ---
 
@@ -229,10 +229,12 @@ If the owner disable WPS feature, you can do nothing.
   - lowercase
   - numbers
   - symbols
+- Also, avoid using common patterns or names.
 
 ### WPS
 
 - If your router has WPS feature, you either need to disable it or enable PBC (Push Button Configuration) for the easy connection.
+- PBC is much safer because it only works when someone physically presses the button on the router.
 
 ---
 
