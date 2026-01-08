@@ -1,0 +1,1 @@
+![AYANOKOJI](./img/ayanokoji.gif)

@@ -515,6 +515,13 @@ nav {
 
     &[data-animated="true"] {
       overflow: hidden;
+      mask: linear-gradient(
+        90deg,
+        transparent,
+        #fff 20%,
+        #fff 80%,
+        transparent
+      );
     }
     &[data-animated="true"] .skill-list {
       flex-wrap: nowrap;
@@ -763,6 +770,11 @@ nav {
             font-size: clamp(15px, 1.2vw, 23px);
             transition: color 0.5s;
 
+            i {
+              width: 1.2rem;
+              text-align: center;
+            }
+
             .blog-link {
               margin-left: auto;
               color: var(--grey);
@@ -970,7 +982,7 @@ footer {
 
     blockquote p {
       margin: 0;
-      color: #f0c7c5;
+      color: var(--grey);
     }
   }
   @media (max-width: 768px) {
