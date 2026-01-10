@@ -22,7 +22,7 @@ Tools covered:
 4. Wordlist
 5. Crunch
 
-> **WARNING** Since I still consider myself a beginner, some of you might think that this tutorial is trash, moreover, my English is not that great. So, don’t read or follow if you value your time.
+> **WARNING** Since I still consider myself a beginner, some of you might think this guide isn’t the best — and yes, my English isn’t perfect either. So, if you value your time, feel free to skip it.
 
 > **DISCLAIMER** This mini-blog’s content is intended solely for educational purposes. I take no responsibility for any abuse of this material, nor do I support unlawful activity.
 
@@ -240,4 +240,4 @@ If the owner disables WPS feature, there's nothing you can really do. WPS attack
 
 ## Session Terminated
 
-Well, thank you for staying with me until the end of this post. I know that this guide is trash, but I hope you learned something from it, see you later!
+Well, thanks for sticking with me until the end of this post. This guide might not be the best, but I hope you learned something from it. See you next time!
