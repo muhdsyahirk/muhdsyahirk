@@ -8,17 +8,17 @@ const blogContent = document.getElementById("mini-blog-content");
 const underConstruction = document.querySelector(".under-construction");
 
 const posts = {
-  first: "./posts/first.md",
-  wifi: "./posts/wifi.md",
-  hack: "./posts/hack.md",
-  detection: "./posts/detection.md",
+  one: "./posts/first-mini-blog.md",
+  two: "./posts/how-to-steal-wifi.md",
+  three: "./posts/how-to-hack-someone.md",
+  four: "./posts/basic-network-attacks-detection.md",
 };
 
 const postTitles = {
-  first: "My First Mini-Blog",
-  wifi: "How to Steal Someone Else's Wi-Fi",
-  hack: "How to Hack Someone From 0 (Same Network)",
-  detection: "Basic Network Attacks Detection using Python & Scapy",
+  one: "My First Mini-Blog",
+  two: "How to Steal Someone Else's Wi-Fi",
+  three: "How to Hack Someone From 0 (Same Network)",
+  four: "Basic Network Attacks Detection using Python & Scapy",
 };
 
 if (!post || !posts[post]) {
