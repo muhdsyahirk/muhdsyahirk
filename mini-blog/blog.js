@@ -17,7 +17,7 @@ const posts = {
 const postTitles = {
   one: "My First Mini-Blog",
   two: "How to Steal Someone Else's Wi-Fi",
-  three: "How to Hack Someone From 0 (Same Network)",
+  three: "3 Ways of How to Hack Someone From 0",
   four: "Basic Network Attacks Detection using Python & Scapy",
 };
 

@@ -66,7 +66,7 @@ Now, we will then continue our attack which is gaining access. But before that, 
 
 ### WEP
 
-WEP was the first Wi-Fi security protocol. It’s now considered not secure due to the encryption that it uses (RC4) with static keys. Read here for more details https://www.kaspersky.com/resource-center/definitions/wep-vs-wpa
+WEP was the first Wi-Fi security protocol. It’s now considered not secure due to the encryption that it uses (RC4) with static keys. [Read here](https://www.kaspersky.com/resource-center/definitions/wep-vs-wpa) for more details.
 
 Now let me explain a little bit about RC4 Cipher. RC4 uses secret network key, and combined it with 24-bit IV, it will then become the key stream. However, this IV is sent in plaintext with each packet, and also it’s too short (24-bit) so it will be repeated.
 
@@ -110,7 +110,7 @@ Bomba! We got the key which is ‘1F1F1F’. We can now connect to the Wi-Fi usi
 
 ### WPA & WPA2
 
-WPA & WPA2 is the modern Wi-Fi security protocol and it’s widely used in most of the routers. Again, read here for more details https://www.kaspersky.com/resource-center/definitions/wep-vs-wpa. WPA & WPA2 has a feature called WPS. I will cover on how to crack password when WPS enabled later.
+WPA & WPA2 is the modern Wi-Fi security protocol and it’s widely used in most of the routers. Again, [read here](https://www.kaspersky.com/resource-center/definitions/wep-vs-wpa) for more details. WPA & WPA2 has a feature called WPS. I will cover on how to crack password when WPS enabled later.
 
 So how do we crack password for WPA & WPA2? It’s not really that simple as WEP, it’s more resource-intensive & time consuming since we need to use wordlist for brute forcing.
 
