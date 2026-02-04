@@ -1,6 +1,6 @@
 # 3 Ways of How to Hack Someone from 0
 
-_20 min read - February 4, 2026 - by muhdsyahirk_
+_20 min read - January 31, 2026 - by muhdsyahirk_
 
 ---
 
@@ -22,9 +22,9 @@ Tools covered:
 3. Zphisher
 4. Arpspoof
 
-> WARNING Since I still consider myself a beginner, some of you might think this guide isn’t the best — and yes, my English isn’t perfect either. So, if you value your time, feel free to skip it.
+> **WARNING** Since I still consider myself a beginner, some of you might think this guide isn’t the best — and yes, my English isn’t perfect either. So, if you value your time, feel free to skip it.
 
-> DISCLAIMER This mini-blog’s content is intended solely for educational purposes. I take no responsibility for any abuse of this material, nor do I support unlawful activity.
+> **DISCLAIMER** This mini-blog’s content is intended solely for educational purposes. I take no responsibility for any abuse of this material, nor do I support unlawful activity.
 
 ### Setting Up my Lab
 
@@ -40,7 +40,7 @@ One more thing, I will be performing these attacks to the victim within the same
 
 In Cyber Kill Chain, this step is called Reconnaissance. There are a lot more in Reconnaissance than just getting the victim’s IP address, as it often involves **OSINT** (Open Source Intelligence), which is essentially ‘spying’ on our target’s public information (e.g. daily activities, interests and potential vulnerabilities). To keep this guide short and simple, I will only focus on the technical part of finding the target.
 
-If we are already in the same network as our target, we can simply do **Host Discovery** by sending **ARP ‘who-has’ packet** to broadcast. There are a lot of ways to do this, but I will show you using Netdiscover.
+If we are already in the same network as our target, we can simply do **Host Discovery** by sending **ARP ‘who-has’ packet** to broadcast. There are a lot of ways to do this, but I will show you using [**Netdiscover**](https://www.kali.org/tools/netdiscover/).
 
 Netdiscover command:
 
@@ -180,7 +180,7 @@ Based on this scenario, we can disguise ourself as a recruiter at EzDevMy. We ca
 
 Since hiring processes usually use email for communication, I will send a spoofed email to the victim using Brevo as the SMTP server. (I will skip the steps for setting up Brevo account)
 
-Since I’m already in the same network as the victim, I’ll host the file using a local **Apache2** web server
+Since I’m already in the same network as the victim, I’ll host the file using a local [**Apache2**](https://www.kali.org/tools/apache2/#apache2) web server
 
 ```bash
 cd /var/www/html/
@@ -221,7 +221,7 @@ After the victim runs the .exe file, we successfully gain control of their machi
 
 ![Connection Received](./img/hack/connection-received.png)
 
-If we type ps, we can see all of the running processes.
+If we type _ps_, we can see all of the running processes.
 
 ![Running Processess List](./img/hack/MSFconsole-ps.png)
 

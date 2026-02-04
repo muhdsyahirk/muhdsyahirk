@@ -47,7 +47,7 @@ airodump-ng *network_interface*
 
 By writing this command, we will then see this output:
 
-![Airodump-ng.png](./img/wifi/Airodump-ng.png)
+![Airodump-ng](./img/wifi/Airodump-ng.png)
 
 - BSSID = MAC address
 - PWR = From my understanding, it’s like ‘ping’ = the lower, the better the connection (ignore ‘-’)
@@ -104,7 +104,7 @@ aircrack-ng *file_name*
 
 Output:
 
-![WEP-crack-output.png](./img/wifi/WEP-crack-output.png)
+![WEP Cracking Output](./img/wifi/WEP-crack-output.png)
 
 Bomba! We got the key which is ‘1F1F1F’. We can now connect to the Wi-Fi using ASCII password (not shown in the image above) or the key.
 
@@ -159,7 +159,7 @@ ls -lh /usr/share/wordlists/
 
 Output:
 
-![WPA-crack-output.png](./img/wifi/WPA-crack-output.png)
+![WPA Cracking Output](./img/wifi/WPA-crack-output.png)
 
 Bomba! The Wi-Fi password is ‘biscotte’.
 
@@ -192,7 +192,7 @@ reaver -b *bssid* --channel *channel* -i *network_interface* -vvv --no-associate
 
 Output:
 
-![WPS-Crack-output.png](./img/wifi/WPS-Crack-output.png)
+![WPS Cracking Output](./img/wifi/WPS-Crack-output.png)
 
 Bomba! The password is on ‘WPA PSK’, which is ‘UAURWSXR’.
 
