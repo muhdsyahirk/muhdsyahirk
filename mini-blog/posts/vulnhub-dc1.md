@@ -137,9 +137,9 @@ I found the **second flag**:
 
 Under the flag, I saw:
 
-- database username
-- database password
-- database name
+- Username → dbuser
+- Password → R0ck3t
+- Database name → drupaldb
 
 This flag tells us to access the database.
 
@@ -263,7 +263,7 @@ I also checked /etc/passwd:
 
 ![Passwd File](./img/vulnhub-dc1/passwd-file.png)
 
-I saw that flag4 is stored in /home
+I saw that flag4 is stored in /home.
 
 Then I found the **fourth flag**:
 
@@ -279,7 +279,7 @@ Bomba! Settleee.
 
 ## Session Terminated
 
-DC-1 machine was a good beginner-level lab that demonstrates a realistic penetration testing workflow from start to finish. I learned how to:
+DC-1 machine is a good beginner-level lab that demonstrates a realistic penetration testing workflow from start to finish. I learned how to:
 
 - perform enumeration using Nmap
 - identify CMS platforms and search for known exploits

@@ -107,8 +107,8 @@ Most payloads are displayed as _platform_ / _type_ / _protocol._
 
 For this demo, I’ll be using **windows/meterpreter/reverse_https**. There are two main ways for us to create a connection between us and the victim:
 
-- Bind = we attempt to connect to our victim’s open port.
-- Reverse = our victim connects back to our attacking machine.
+- Bind: we attempt to connect to our victim’s open port.
+- Reverse: our victim connects back to our attacking machine.
 
 Since most of the personal computers usually block incoming connections, we can do **Reverse**. When the victim runs the file, their computer initiates the connection to us.
 
@@ -122,8 +122,8 @@ msfvenom --payload windows/meterpreter/reverse_https **--list-options
 
 We are interested in the basic options, as LHOST and LPORT are required.
 
-- LHOST = IP address of our attacking machine.
-- LPORT = Port we want to listen on.
+- LHOST → IP address of our attacking machine.
+- LPORT → Port we want to listen on.
 
 To create our payload
 
@@ -237,9 +237,9 @@ Now we can do whatever we want with the target machine such as:
 
 Meterpreter has many powerful features such as:
 
-- keyscan_start / keyscan_dump / keyscan_stop: To capture keystrokes.
-- screenshot: To see the victim’s screen.
-- webcam_snap: To take a photo from the webcam.
+- keyscan_start / keyscan_dump / keyscan_stop → To capture keystrokes.
+- screenshot → To see the victim’s screen.
+- webcam_snap → To take a photo from the webcam.
 
 After this, we can perform further actions, such as maintaining access even after the victim restarts their computer, or moving laterally to hack other machines in the network (pivoting).
 
@@ -259,9 +259,9 @@ show options
 
 We need to configure these:
 
-- DELAY = Amount of time (in seconds) the target waits before trying to reconnect to us.
-- EXE_NAME = Process where the connection coming back from.
-- SESSION = The background session (since we only have one, we will use 1)
+- DELAY → Amount of time (in seconds) the target waits before trying to reconnect to us.
+- EXE_NAME → Process where the connection coming back from.
+- SESSION → The background session (since we only have one, we will use 1)
 - And if we do ‘show advanced’, we can see EXE::Custom. This is the custom payload we want to use for maintaining the access. (we’ll just use test_debug.exe)
 
 ```bash
