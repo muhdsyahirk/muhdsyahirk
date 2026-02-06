@@ -11,14 +11,14 @@ const posts = {
   one: "./posts/first-mini-blog.md",
   two: "./posts/how-to-steal-wifi.md",
   three: "./posts/how-to-hack-someone.md",
-  four: "./posts/basic-network-attacks-detection.md",
+  four: "./posts/vulnhub-dc1.md",
 };
 
 const postTitles = {
   one: "My First Mini-Blog",
   two: "How to Steal Someone Else's Wi-Fi",
   three: "3 Ways of How to Hack Someone From 0",
-  four: "Basic Network Attacks Detection using Python & Scapy",
+  four: "VulnHub - DC: 1 (In Detail)",
 };
 
 if (!post || !posts[post]) {
