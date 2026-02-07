@@ -12,6 +12,7 @@ const posts = {
   two: "./posts/how-to-steal-wifi.md",
   three: "./posts/how-to-hack-someone.md",
   four: "./posts/vulnhub-dc1.md",
+  five: "./posts/vulnhub-dc2.md",
 };
 
 const postTitles = {
@@ -19,6 +20,7 @@ const postTitles = {
   two: "How to Steal Someone Else's Wi-Fi",
   three: "3 Ways of How to Hack Someone From 0",
   four: "VulnHub - DC: 1 (In Detail)",
+  five: "VulnHub - DC: 2 (In Detail)",
 };
 
 if (!post || !posts[post]) {
