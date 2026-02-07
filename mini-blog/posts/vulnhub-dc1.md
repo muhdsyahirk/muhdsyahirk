@@ -261,15 +261,30 @@ This file contains password hashes.
 
 I also checked /etc/passwd:
 
+```bash
+cat /etc/passwd
+```
+
 ![Passwd File](./img/vulnhub-dc1/passwd-file.png)
 
 I saw that flag4 is stored in /home.
+
+```bash
+cd /home/flag4
+cat flag4.txt
+```
 
 Then I found the **fourth flag**:
 
 ![Flag 4](./img/vulnhub-dc1/flag4.png)
 
 This flag hints that the **final flag** is stored in root directory.
+
+```bash
+cd /root
+ls
+cat thefinalflag.txt
+```
 
 ![Final Flag](./img/vulnhub-dc1/finalflag.png)
 
