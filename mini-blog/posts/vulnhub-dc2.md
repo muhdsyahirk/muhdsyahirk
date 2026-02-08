@@ -6,8 +6,9 @@ _10 min read · February 6, 2026 · by muhdsyahirk_
 
 ## Entry Log
 
-In this mini-blog, I will share my detailed walkthrough of solving [**DC: 2**](https://www.vulnhub.com/entry/dc-2,311/) machine form [**VulnHub**](https://www.vulnhub.com/).
+In this mini-blog, I will share my detailed walkthrough of solving [**DC: 2**](https://www.vulnhub.com/entry/dc-2,311/) machine form [**VulnHub**](https://www.vulnhub.com/about/).
 
+- Goal: Final Flag (Root)
 - Difficulty: Easy
 - Machine Author: DCAU7
 

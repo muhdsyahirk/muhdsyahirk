@@ -8,6 +8,7 @@ _10 min read · February 5, 2026 · by muhdsyahirk_
 
 In this mini-blog, I will show my walkthrough while solving the [**DC: 1**](https://www.vulnhub.com/entry/dc-1,292/) machine from [**VulnHub**](https://www.vulnhub.com/about/). I decided to write this because many existing write-ups skip important steps, especially for beginners who want to understand the full process. This walkthrough focuses not only on the commands used, but also the reasoning behind each step. The machine covers CMS exploitation, password cracking, and Linux privilege escalation. I will explain everything based on my actual learning experience while solving the lab.
 
+- Goal: Final Flag (Root)
 - Difficulty: Easy
 - Machine Author: DCAU7
 
