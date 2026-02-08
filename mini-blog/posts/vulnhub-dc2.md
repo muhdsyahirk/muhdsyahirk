@@ -26,7 +26,7 @@ sudo netdiscover -i eth0 -r 192.168.11.0/24
 
 In my case, DC-2 IP address is **192.168.11.141**.
 
-## Scanning the Open Ports
+## Scanning for Open Ports
 
 Next I scanned the machine using [**Nmap**](https://www.kali.org/tools/nmap/).
 
