@@ -1,6 +1,6 @@
 # My First Mini-Blog
 
-_2 min read · August 18, 2025 · by muhdsyahirk_
+_2 min read · August 18, 2025 · by Muhd Syahir_
 
 ---
 
