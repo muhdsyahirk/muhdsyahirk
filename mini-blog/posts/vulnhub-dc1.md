@@ -293,7 +293,7 @@ Bomba! Settleee.
 
 ## Session Terminated
 
-DC-1 machine is a good beginner-level lab that demonstrates a realistic penetration testing workflow from start to finish. I learned how to:
+DC-1 machine is a good easy level machine that demonstrates a realistic penetration testing workflow from start to finish. I learned how to:
 
 - perform enumeration using Nmap
 - identify CMS platforms and search for known exploits

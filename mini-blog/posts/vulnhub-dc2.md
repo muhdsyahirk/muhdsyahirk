@@ -9,7 +9,7 @@ _10 min read · February 6, 2026 · by qs18_
 In this mini-blog, I will share my detailed walkthrough of solving [**DC: 2**](https://www.vulnhub.com/entry/dc-2,311/) machine form [**VulnHub**](https://www.vulnhub.com/about/).
 
 - Goal: Final Flag (Root)
-- Difficulty: Easy
+- Difficulty: Easy+
 - Machine Author: DCAU7
 
 ---
@@ -328,7 +328,7 @@ Bomba! Settleee.
 
 ## Session Terminated
 
-DC-2 is another good beginner-to-intermediate level lab that focuses more on enumeration, logical thinking, and understanding restricted Linux environments rather than relying purely on exploits. Throughout this machine, I learned how to:
+DC-2 is another good easy+ level machine that focuses more on enumeration, logical thinking, and understanding restricted Linux environments rather than relying purely on exploits. Throughout this machine, I learned how to:
 
 - identify virtual hosting issues and configure `/etc/hosts`
 - perform WordPress enumeration using WPScan
