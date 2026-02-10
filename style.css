@@ -225,6 +225,14 @@ nav {
         p {
           /* font-size: 80px; */
           font-size: clamp(25px, 5.18vw, 80px);
+
+          .main-name {
+            transition: color 1s;
+
+            &.scroll-color {
+              color: var(--red);
+            }
+          }
         }
       }
       .main-content-brief {
@@ -274,20 +282,8 @@ nav {
       .main-content {
         width: 62%;
         transform: translateX(0);
-        /* text-align: center; */
         padding: 15px 8px;
-        /* border: 1px solid var(--red);
-        border-radius: 15px; */
-        /* background: rgba(0, 0, 0, 0.83);
-        backdrop-filter: blur(2.3px);
-        -webkit-backdrop-filter: blur(2.3px); */
         line-height: clamp(22px, 6vw, 30px);
-
-        /* .main-content-link {
-          ul {
-            justify-content: center;
-          }
-        } */
       }
     }
   }
