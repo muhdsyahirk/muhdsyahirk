@@ -947,7 +947,7 @@ footer {
 
     img {
       max-width: 100%;
-      border: 1px solid var(--red);
+      border-left: 1px solid var(--red);
     }
 
     hr {
