@@ -15,6 +15,7 @@ const posts = {
   five: "./posts/vulnhub-dc2.md",
   six: "./posts/vulnhub-dc4.md",
   seven: "./posts/vulnhub-sickos1.1.md",
+  eight: "./posts/vulnhub-sickos1.2.md",
 };
 
 const postTitles = {

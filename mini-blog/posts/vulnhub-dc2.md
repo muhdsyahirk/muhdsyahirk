@@ -60,11 +60,11 @@ sudo nano /etc/hosts
 
 ![/etc/hosts](./img/vulnhub-dc2/etc-hosts.png)
 
-After that, the site loaded properly. I noticed the website is running WordPress, and after playing around with it, I found the **first flag**.
+After that, the site loaded properly. I noticed the website is running **WordPress**, and after playing around with it, I found the **first flag**.
 
 ![Flag 1](./img/vulnhub-dc2/flag1.png)
 
-This flag means that we need to use CeWL to generate a custom password wordlist since it’s stated there “Your usual wordlists probably won’t work”.
+This flag means that we need to use `CeWL` to generate a custom password wordlist since it’s stated there “Your usual wordlists probably won’t work”.
 
 ---
 
@@ -78,7 +78,7 @@ nikto --host http://dc-2
 
 ![Nikto Output](./img/vulnhub-dc2/Nikto-output.png)
 
-I found the login page: dc-2/wp-login.php.
+I found the login page: `dc-2/wp-login.php`.
 
 I also used [**WPScan**](https://github.com/wpscanteam/wpscan).
 
@@ -90,7 +90,7 @@ wpscan --url http://dc-2 -e u
 
 ![WPScan Output](./img/vulnhub-dc2/WPScan-output.png)
 
-I saved these usernames (admin, jerry and tom) into user.txt.
+I saved these usernames (admin, jerry and tom) into `user.txt`.
 
 Since the flag hinted that common wordlists might not work, I generated a custom wordlist using [**CeWL**](https://www.kali.org/tools/cewl/).
 
@@ -146,7 +146,7 @@ parturient
 
 ![Tom SSH](./img/vulnhub-dc2/Tom-ssh.png)
 
-After logging in, I saw flag3.txt, but I couldn’t run normal commands (cat).
+After logging in, I saw `flag3.txt`, but I couldn’t run normal commands (cat).
 
 ```bash
 cat flag3.txt
@@ -160,7 +160,7 @@ Output:
 
 The error message showed -rbash, which means that Tom is using a restricted bash shell. Restricted bash limits the commands that can be executed and often confines users to a limited set of binaries.
 
-Then I checked the PATH variable:
+Then I checked the `PATH` variable:
 
 ```bash
 echo $PATH
@@ -172,7 +172,7 @@ Output:
 /home/tom/usr/bin
 ```
 
-I discovered that only /home/tom/usr/bin was available for executing commands.
+I discovered that only `/home/tom/usr/bin` was available for executing commands.
 
 Then I ls that directory.
 
@@ -188,7 +188,7 @@ less flag3.txt
 
 ![Flag 3](./img/vulnhub-dc2/flag3.png)
 
-This flag means that we need to change user (using su) to Jerry.
+This flag means that we need to change user (using `su`) to Jerry.
 
 ---
 
@@ -206,17 +206,17 @@ Output:
 -rbash: su: command not found
 ```
 
-As stated earlier, vi is allowed. vi is a text editor, but it can execute external commands and even spawn a shell, so I used vi to escape the restricted environment (-rbash).
+As stated earlier, `vi` is allowed. `vi` is a text editor, but it can execute external commands and even spawn a shell, so I used `vi` to escape the restricted environment (-rbash).
 
 Note: Many interactive programs such as text editor, pagers or scripting tools allow shell access.
 
-First, I opened vi:
+First, I opened `vi`:
 
 ```bash
 vi
 ```
 
-Then Inside vi, I executed:
+Then Inside `vi`, I executed:
 
 ```bash
 :set shell=/bin/bash <enter>
@@ -227,7 +227,7 @@ Then Inside vi, I executed:
 
 ![vi 1](./img/vulnhub-dc2/vi-1.png)
 
-This sets the shell that vi will use when spawning a command shell.
+This sets the shell that `vi` will use when spawning a command shell.
 
 Then I executed:
 
@@ -247,7 +247,7 @@ I then restored command access:
 export PATH=$PATH:/bin:/sbin
 ```
 
-This adds standard command directories back into PATH.
+This adds standard command directories back into `PATH`.
 
 And changed to Jerry:
 
@@ -273,7 +273,7 @@ And I found the **fourth flag**.
 
 ## Final Flag
 
-Firstly, I checked sudo permissions on Jerry.
+Firstly, I checked `sudo` permissions on Jerry.
 
 ```bash
 sudo -l
@@ -283,7 +283,7 @@ Output:
 
 ![Jerry sudo Permission](./img/vulnhub-dc2/Jerry-sudo.png)
 
-This shows that Jerry can run git as root.
+This shows that Jerry can run `git` as root.
 
 ```bash
 sudo git -p help config

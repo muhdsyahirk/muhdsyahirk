@@ -121,7 +121,7 @@ So the next logical step is to locate Drupal config files.
 
 ## Flag 2
 
-After doing some [google search](https://www.drupal.org/forum/general/general-discussion/2008-06-19/drupal-configuration-file), I found out that it’s located at sites/default/settings.php.
+After doing some [google search](https://www.drupal.org/forum/general/general-discussion/2008-06-19/drupal-configuration-file), I found out that it’s located at `sites/default/settings.php`.
 
 Navigate there:
 
@@ -180,7 +180,7 @@ select * from users;
 
 ![User Data](./img/vulnhub-dc1/user-data.png)
 
-The password starts with ‘$S$’. This indicates a Drupal 7 hash.
+The password starts with `$S$`. This indicates a Drupal 7 hash.
 
 I saved the hash in .txt file and used [**Hashcat**](https://www.kali.org/tools/hashcat/) to crack it:
 
@@ -232,7 +232,7 @@ find / -perm -4000 2>/dev/null
 
 ![SUID Files](./img/vulnhub-dc1/SUID-files.png)
 
-As shown here, /usr/bin/find has the SUID bit set, which allows it to run with root privileges.
+As shown here, `/usr/bin/find` has the SUID bit set, which allows it to run with root privileges.
 
 To do privilege escalation using SUID find:
 
@@ -248,7 +248,7 @@ find . -exec /bin/sh \; -quit
 
 ![Privilege Escalated](./img/vulnhub-dc1/Priv-Esc.png)
 
-Accessing the ‘shadow’ file:
+Accessing the `shadow` file:
 
 ```bash
 cat /etc/shadow
@@ -258,7 +258,7 @@ cat /etc/shadow
 
 This file contains password hashes.
 
-I also checked /etc/passwd:
+I also checked `/etc/passwd`:
 
 ```bash
 cat /etc/passwd
@@ -266,7 +266,7 @@ cat /etc/passwd
 
 ![Passwd File](./img/vulnhub-dc1/passwd-file.png)
 
-I saw that flag4 is stored in /home.
+I saw that flag4 is stored in `/home`.
 
 ```bash
 cd /home/flag4
