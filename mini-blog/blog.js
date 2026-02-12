@@ -26,6 +26,7 @@ const postTitles = {
   five: "VulnHub - DC: 2 (In Detail)",
   six: "VulnHub - DC: 4 (In Detail)",
   seven: "VulnHub - SickOs: 1.1 (In Detail)",
+  eight: "VulnHub - SickOs: 1.2 (In Detail)",
 };
 
 if (!post || !posts[post]) {
