@@ -961,11 +961,57 @@ footer {
       font-family: "Fira Code", "JetBrains Mono", monospace;
     }
 
-    pre {
-      background: var(--dark-grey);
-      padding: 1.2rem 1.5rem;
+    .code-block-wrapper {
       margin: 2rem 0;
       border-radius: 8px;
+      overflow: hidden;
+      background: var(--dark-grey);
+    }
+
+    .code-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 1.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-bottom: 1px solid rgba(231, 14, 6, 0.2);
+    }
+
+    .code-lang {
+      font-size: 0.75rem;
+      color: var(--red);
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .copy-btn {
+      background: transparent;
+      border: 1px solid var(--red);
+      color: var(--red);
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.75rem;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+
+      &:hover {
+        background: var(--red);
+        color: var(--black);
+      }
+
+      i {
+        font-size: 0.85rem;
+      }
+    }
+
+    pre {
+      padding: 1.2rem 1.5rem;
+      margin: 0;
+      border-radius: 0;
       overflow-x: auto;
     }
 

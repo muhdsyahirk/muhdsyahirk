@@ -47,6 +47,53 @@ if (!post || !posts[post]) {
       document.title = `${postTitles[post]} | Muhd Syahir`;
       miniBlog.style.display = "flex";
       blogContent.innerHTML = marked.parse(md);
+
+      // Lazy loading for images
+      blogContent.querySelectorAll("img").forEach((img) => {
+        img.setAttribute("loading", "lazy");
+      });
+
+      // PRE CODE
+      document.querySelectorAll("pre code").forEach((codeBlock) => {
+        const pre = codeBlock.parentElement;
+
+        // Get language from class (marked adds "language-bash", "language-python")
+        const langClass = codeBlock.className.match(/language-(\w+)/);
+        const language = langClass ? langClass[1] : "code";
+
+        // Header + Pre Code
+        const wrapper = document.createElement("div");
+        wrapper.className = "code-block-wrapper";
+
+        // Header
+        const header = document.createElement("div");
+        header.className = "code-header";
+
+        // Header - Language
+        const langLabel = document.createElement("span");
+        langLabel.className = "code-lang";
+        langLabel.textContent = language;
+
+        // Header - Copy btn
+        const copyBtn = document.createElement("button");
+        copyBtn.className = "copy-btn";
+        copyBtn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy';
+        copyBtn.onclick = () => {
+          navigator.clipboard.writeText(codeBlock.textContent);
+          copyBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+          setTimeout(() => {
+            copyBtn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy';
+          }, 2000);
+        };
+
+        header.appendChild(langLabel);
+        header.appendChild(copyBtn);
+
+        // Insert wrapper before pre
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(header);
+        wrapper.appendChild(pre);
+      });
     })
     .catch((err) => {
       underConstruction.style.display = "flex";
