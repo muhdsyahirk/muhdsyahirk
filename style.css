@@ -887,7 +887,8 @@ footer {
   }
 }
 .mini-blog {
-  color: var(--white);
+  /* color: var(--white); */
+  color: #e0e0e0;
   display: none;
   justify-content: center;
 

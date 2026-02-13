@@ -16,6 +16,7 @@ const posts = {
   six: "./posts/vulnhub-dc4.md",
   seven: "./posts/vulnhub-sickos1.1.md",
   eight: "./posts/vulnhub-sickos1.2.md",
+  nine: "./posts/vulnhub-troll1.md",
 };
 
 const postTitles = {
@@ -27,6 +28,7 @@ const postTitles = {
   six: "VulnHub - DC: 4 (In Detail)",
   seven: "VulnHub - SickOs: 1.1 (In Detail)",
   eight: "VulnHub - SickOs: 1.2 (In Detail)",
+  nine: "VulnHub - Tr0ll: 1 (In Detail)",
 };
 
 if (!post || !posts[post]) {

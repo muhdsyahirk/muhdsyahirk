@@ -14,7 +14,7 @@ In this mini-blog, I’ll be showing you the walkthrough for [**SickOs: 1.1**](h
 
 ---
 
-## Getting the Machine IP address
+## Getting the Machine IP Address
 
 As usual:
 

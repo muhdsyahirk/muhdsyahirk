@@ -14,7 +14,7 @@ In this mini-blog, I’ll be showing you the walkthrough for [**SickOs: 1.2**](h
 
 ---
 
-## Getting the Machine IP address
+## Getting the Machine IP Address
 
 As usual:
 
@@ -170,7 +170,7 @@ chkrootkit -V
 
 The version was 0.49.
 
-According to [Exploit-DB](https://www.exploit-db.com/exploits/38775), `chrootkit` versions < 0.50 are vulnerable. It executes a file name `/tmp/update/` if it exists. Since `/tmp` is world-writable, any user can create that file. Because cron runs `chkrootkit` as root, the `/tmp/update` file will also be executed as root.
+According to [Exploit-DB](https://www.exploit-db.com/exploits/38775), `chkrootkit` versions < 0.50 are vulnerable. It executes a file name `/tmp/update/` if it exists. Since `/tmp` is world-writable, any user can create that file. Because cron runs `chkrootkit` as root, the `/tmp/update` file will also be executed as root.
 
 ---
 
