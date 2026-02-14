@@ -257,7 +257,7 @@ However, there was nothing useful here.
 
 ---
 
-## Credential Reuse and Privilege Escalation
+## Credential Reuse & Privilege Escalation
 
 Since there was only one user (**sickos**), I attempted **credential reuse** by using the database password for this user.
 

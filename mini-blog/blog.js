@@ -8,27 +8,29 @@ const blogContent = document.getElementById("mini-blog-content");
 const underConstruction = document.querySelector(".under-construction");
 
 const posts = {
-  one: "./posts/first-mini-blog.md",
-  two: "./posts/how-to-steal-wifi.md",
-  three: "./posts/how-to-hack-someone.md",
-  four: "./posts/vulnhub-dc1.md",
-  five: "./posts/vulnhub-dc2.md",
-  six: "./posts/vulnhub-dc4.md",
-  seven: "./posts/vulnhub-sickos1.1.md",
-  eight: "./posts/vulnhub-sickos1.2.md",
-  nine: "./posts/vulnhub-troll1.md",
+  "first-blog": "./posts/first-mini-blog.md",
+  "steal-wifi": "./posts/how-to-steal-wifi.md",
+  "hack-someone": "./posts/how-to-hack-someone.md",
+  "vh-dc1": "./posts/vulnhub-dc1.md",
+  "vh-dc2": "./posts/vulnhub-dc2.md",
+  "vh-dc3": "./posts/vulnhub-dc3.md",
+  "vh-dc4": "./posts/vulnhub-dc4.md",
+  "vh-sickos1-1": "./posts/vulnhub-sickos1.1.md",
+  "vh-sickos1-2": "./posts/vulnhub-sickos1.2.md",
+  "vh-troll1": "./posts/vulnhub-troll1.md",
 };
 
 const postTitles = {
-  one: "My First Mini-Blog",
-  two: "How to Steal Someone Else's Wi-Fi",
-  three: "3 Ways of How to Hack Someone From 0",
-  four: "VulnHub - DC: 1 (In Detail)",
-  five: "VulnHub - DC: 2 (In Detail)",
-  six: "VulnHub - DC: 4 (In Detail)",
-  seven: "VulnHub - SickOs: 1.1 (In Detail)",
-  eight: "VulnHub - SickOs: 1.2 (In Detail)",
-  nine: "VulnHub - Tr0ll: 1 (In Detail)",
+  "first-blog": "My First Mini-Blog",
+  "steal-wifi": "How to Steal Someone Else's Wi-Fi",
+  "hack-someone": "3 Ways of How to Hack Someone From 0",
+  "vh-dc1": "VulnHub - DC: 1 (In Detail)",
+  "vh-dc2": "VulnHub - DC: 2 (In Detail)",
+  "vh-dc3": "VulnHub - DC: 3 (In Detail)",
+  "vh-dc4": "VulnHub - DC: 4 (In Detail)",
+  "vh-sickos1-1": "VulnHub - SickOs: 1.1 (In Detail)",
+  "vh-sickos1-2": "VulnHub - SickOs: 1.2 (In Detail)",
+  "vh-troll1": "VulnHub - Tr0ll: 1 (In Detail)",
 };
 
 if (!post || !posts[post]) {

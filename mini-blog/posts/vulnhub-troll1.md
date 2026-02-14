@@ -1,6 +1,6 @@
 # VulnHub - Tr0ll: 1 (In Detail)
 
-_8 min read · February 14, 2026 · by qs18_
+_6 min read · February 14, 2026 · by qs18_
 
 ---
 
