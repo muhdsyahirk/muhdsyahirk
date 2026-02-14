@@ -130,9 +130,7 @@ Then I ran it.
 ./roflmao
 ```
 
-Output:
-
-```bash
+```output
 Find address 0x0856BF to proceed
 ```
 
@@ -225,9 +223,7 @@ I checked `cronlog`:
 cat /var/log/cronlog
 ```
 
-Output:
-
-```bash
+```output
 */2 * * * * cleaner.py
 ```
 

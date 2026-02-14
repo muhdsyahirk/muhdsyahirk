@@ -76,20 +76,22 @@ if (!post || !posts[post]) {
         langLabel.className = "code-lang";
         langLabel.textContent = language;
 
-        // Header - Copy btn
-        const copyBtn = document.createElement("button");
-        copyBtn.className = "copy-btn";
-        copyBtn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy';
-        copyBtn.onclick = () => {
-          navigator.clipboard.writeText(codeBlock.textContent);
-          copyBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
-          setTimeout(() => {
-            copyBtn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy';
-          }, 2000);
-        };
-
         header.appendChild(langLabel);
-        header.appendChild(copyBtn);
+
+        // Header - Copy btn (if not output)
+        if (language !== "output") {
+          const copyBtn = document.createElement("button");
+          copyBtn.className = "copy-btn";
+          copyBtn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy';
+          copyBtn.onclick = () => {
+            navigator.clipboard.writeText(codeBlock.textContent);
+            copyBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+            setTimeout(() => {
+              copyBtn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy';
+            }, 2000);
+          };
+          header.appendChild(copyBtn);
+        }
 
         // Insert wrapper before pre
         pre.parentNode.insertBefore(wrapper, pre);

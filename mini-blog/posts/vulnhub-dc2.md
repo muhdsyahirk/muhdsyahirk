@@ -152,9 +152,7 @@ After logging in, I saw `flag3.txt`, but I couldn’t run normal commands (cat).
 cat flag3.txt
 ```
 
-Output:
-
-```bash
+```output
 -rbash: cat: command not found
 ```
 
@@ -166,9 +164,7 @@ Then I checked the `PATH` variable:
 echo $PATH
 ```
 
-Output:
-
-```bash
+```output
 /home/tom/usr/bin
 ```
 
@@ -200,9 +196,7 @@ I tried to change user, but failed (as explained above).
 su jerry
 ```
 
-Output:
-
-```bash
+```output
 -rbash: su: command not found
 ```
 

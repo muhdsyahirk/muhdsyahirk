@@ -72,9 +72,7 @@ curl -v http://192.168.11.140/robots.txt -x http://192.168.11.140:3128
 - -v → Verbose.
 - -x → Proxy.
 
-Output:
-
-```bash
+```output
 User-agent: *
 Disallow: /
 Dissalow: /wolfcms
@@ -106,9 +104,7 @@ Based on the Nikto output, I checked the following CGI endpoint:
 curl -v http://192.168.11.140/cgi-bin/status -x http://192.168.11.140:3128
 ```
 
-Output:
-
-```bash
+```output
 { "uptime": " 10:05:50 up 1:20, 0 users, load average: 0.01, 0.02, 0.05", "kernel": "Linux SickOs 3.11.0-15-generic #25~precise1-Ubuntu SMP Thu Jan 30 17:42:40 UTC 2014 i686 i686 i386 GNU/Linux"}
 ```
 
@@ -189,9 +185,7 @@ cd /var/www
 ls
 ```
 
-Output:
-
-```bash
+```output
 connect.py
 index.php
 robots.txt
@@ -207,9 +201,7 @@ cd wolfcms
 ls
 ```
 
-Output:
-
-```bash
+```output
 CONTRIBUTING.md
 README.md
 composer.json
