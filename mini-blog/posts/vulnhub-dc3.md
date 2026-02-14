@@ -1,6 +1,6 @@
 # VulnHub - DC: 3 (In Detail)
 
-_6 min read · February 16, 2026 · by qs18_
+_6 min read · February 15, 2026 · by qs18_
 
 ---
 
