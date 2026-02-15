@@ -18,6 +18,9 @@ const posts = {
   "vh-sickos1-1": "./posts/vulnhub-sickos1.1.md",
   "vh-sickos1-2": "./posts/vulnhub-sickos1.2.md",
   "vh-troll1": "./posts/vulnhub-troll1.md",
+  "vh-troll2": "./posts/vulnhub-troll2.md",
+  "vh-theplanet-mercury": "./posts/vulnhub-planet-mercury.md",
+  "vh-theplanet-earth": "./posts/vulnhub-planet-earth.md",
 };
 
 const postTitles = {
@@ -31,6 +34,9 @@ const postTitles = {
   "vh-sickos1-1": "VulnHub - SickOs: 1.1 (In Detail)",
   "vh-sickos1-2": "VulnHub - SickOs: 1.2 (In Detail)",
   "vh-troll1": "VulnHub - Tr0ll: 1 (In Detail)",
+  "vh-troll2": "VulnHub - Tr0ll: 2 (In Detail)",
+  "vh-theplanet-mercury": "VulnHub - The Planets: Mercury (In Detail)",
+  "vh-theplanet-earth": "VulnHub - The Planets: Earth (In Detail)",
 };
 
 if (!post || !posts[post]) {
