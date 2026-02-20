@@ -1,4 +1,4 @@
-# VulnHub - SickOs: 1.1 (In Detail)
+# VulnHub - SickOs: 1.1 (Write-Up)
 
 _8 min read · February 10, 2026 · by qs18_
 

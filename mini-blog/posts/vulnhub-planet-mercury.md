@@ -1,4 +1,4 @@
-# VulnHub - The Planets: Mercury (In Detail)
+# VulnHub - The Planets: Mercury (Write-Up)
 
 _6 min read · February 16, 2026 · by qs18_
 
@@ -261,7 +261,7 @@ Bomba! Settleee.
 
 ## Session Terminated
 
-The Planets: Mercury is an easy machine that focuses on SQL injection, credential reuse and privilege escalation through sudo misconfig. From this machine, I learned to:
+The Planets: Mercury is an easy machine that focuses on SQL injection, credential reuse and privilege escalation through sudo misconfig. From this machine, I learned how to:
 
 - identify SQL injection points in dynamic web applications
 - use sqlmap to enumerate databases, tables, and dump credentials

@@ -1,4 +1,4 @@
-# VulnHub - Tr0ll: 1 (In Detail)
+# VulnHub - Tr0ll: 1 (Write-Up)
 
 _6 min read · February 14, 2026 · by qs18_
 

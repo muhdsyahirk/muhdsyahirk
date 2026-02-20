@@ -1,4 +1,4 @@
-# VulnHub - DC: 3 (In Detail)
+# VulnHub - DC: 3 (Write-Up)
 
 _6 min read · February 15, 2026 · by qs18_
 

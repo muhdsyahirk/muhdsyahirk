@@ -18,25 +18,25 @@ const posts = {
   "vh-sickos1-1": "./posts/vulnhub-sickos1.1.md",
   "vh-sickos1-2": "./posts/vulnhub-sickos1.2.md",
   "vh-troll1": "./posts/vulnhub-troll1.md",
-  "vh-troll2": "./posts/vulnhub-troll2.md",
   "vh-theplanet-mercury": "./posts/vulnhub-planet-mercury.md",
   "vh-theplanet-earth": "./posts/vulnhub-planet-earth.md",
+  "thm-simplectf": "./posts/thm-simplectf.md",
 };
 
 const postTitles = {
   "first-blog": "My First Mini-Blog",
   "steal-wifi": "How to Steal Someone Else's Wi-Fi",
   "hack-someone": "3 Ways of How to Hack Someone From 0",
-  "vh-dc1": "VulnHub - DC: 1 (In Detail)",
-  "vh-dc2": "VulnHub - DC: 2 (In Detail)",
-  "vh-dc3": "VulnHub - DC: 3 (In Detail)",
-  "vh-dc4": "VulnHub - DC: 4 (In Detail)",
-  "vh-sickos1-1": "VulnHub - SickOs: 1.1 (In Detail)",
-  "vh-sickos1-2": "VulnHub - SickOs: 1.2 (In Detail)",
-  "vh-troll1": "VulnHub - Tr0ll: 1 (In Detail)",
-  "vh-troll2": "VulnHub - Tr0ll: 2 (In Detail)",
-  "vh-theplanet-mercury": "VulnHub - The Planets: Mercury (In Detail)",
-  "vh-theplanet-earth": "VulnHub - The Planets: Earth (In Detail)",
+  "vh-dc1": "VulnHub - DC: 1 (Write-Up)",
+  "vh-dc2": "VulnHub - DC: 2 (Write-Up)",
+  "vh-dc3": "VulnHub - DC: 3 (Write-Up)",
+  "vh-dc4": "VulnHub - DC: 4 (Write-Up)",
+  "vh-sickos1-1": "VulnHub - SickOs: 1.1 (Write-Up)",
+  "vh-sickos1-2": "VulnHub - SickOs: 1.2 (Write-Up)",
+  "vh-troll1": "VulnHub - Tr0ll: 1 (Write-Up)",
+  "vh-theplanet-mercury": "VulnHub - The Planets: Mercury (Write-Up)",
+  "vh-theplanet-earth": "VulnHub - The Planets: Earth (Write-Up)",
+  "thm-simplectf": "TryHackMe - Simple CTF (Write-Up)",
 };
 
 if (!post || !posts[post]) {
