@@ -1,13 +1,13 @@
 import { marked } from "https://cdn.jsdelivr.net/npm/marked/+esm";
 
 const params = new URLSearchParams(window.location.search);
-const post = params.get("post");
+const postParam = params.get("post");
 
-const miniBlog = document.querySelector(".mini-blog");
-const blogContent = document.getElementById("mini-blog-content");
+const post = document.querySelector(".post");
+const postContent = document.getElementById("post-content");
 const underConstruction = document.querySelector(".under-construction");
 
-const posts = {
+const postFile = {
   "first-blog": "./posts/first-mini-blog.md",
   "steal-wifi": "./posts/how-to-steal-wifi.md",
   "hack-someone": "./posts/how-to-hack-someone.md",
@@ -39,12 +39,12 @@ const postTitles = {
   "thm-simplectf": "TryHackMe - Simple CTF (Write-Up)",
 };
 
-if (!post || !posts[post]) {
+if (!postParam || !postFile[postParam]) {
   underConstruction.style.display = "flex";
   underConstruction.innerHTML =
-    "<h2>Sorry,<br>Blog Under Construction.<br>Come back later!</h2>";
+    "<h2>Sorry,<br>Post Under Construction.<br>Come back later!</h2>";
 } else {
-  fetch(posts[post])
+  fetch(postFile[postParam])
     .then((res) => {
       if (!res.ok) {
         throw new Error("Post not ready");
@@ -52,13 +52,19 @@ if (!post || !posts[post]) {
       return res.text();
     })
     .then((md) => {
-      document.title = `${postTitles[post]} | Muhd Syahir`;
-      miniBlog.style.display = "flex";
-      blogContent.innerHTML = marked.parse(md);
+      document.title = `${postTitles[postParam]} | Muhd Syahir`;
+      post.style.display = "flex";
+      postContent.innerHTML = marked.parse(md);
 
       // Lazy loading for images
-      blogContent.querySelectorAll("img").forEach((img) => {
+      postContent.querySelectorAll("img").forEach((img) => {
         img.setAttribute("loading", "lazy");
+      });
+
+      // Open links in new tab
+      postContent.querySelectorAll("a").forEach((link) => {
+        link.setAttribute("target", "_blank");
+        link.setAttribute("rel", "noopener noreferrer");
       });
 
       // PRE CODE
@@ -108,7 +114,7 @@ if (!post || !posts[post]) {
     .catch((err) => {
       underConstruction.style.display = "flex";
       underConstruction.innerHTML =
-        "<h2>Sorry,<br>Blog Under Construction.<br>Come back later!</h2>";
+        "<h2>Sorry,<br>Post Under Construction.<br>Come back later!</h2>";
       console.warn(err.message);
     });
 }

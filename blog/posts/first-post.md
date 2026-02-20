@@ -1,4 +1,4 @@
-# My First Mini-Blog
+# My First Post
 
 _2 min read · August 18, 2025 · by Muhd Syahir_
 
@@ -8,7 +8,7 @@ _2 min read · August 18, 2025 · by Muhd Syahir_
 
 ## Intro
 
-Hi and welcome to my mini-blog. I'll be using this space to share my experiences and the things I've learned in IT and Cybersecurity. Most of the content here will be the journey I'm currently taking to improve my skills.
+Hi and welcome to my blog. I'll be using this space to share my experiences and the things I've learned in IT and Cybersecurity. Most of the content here will be the journey I'm currently taking to improve my skills.
 
 ---
 
