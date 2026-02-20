@@ -1,4 +1,4 @@
-# 3 Ways of How to Hack Someone From 0
+# 3 Ways of How to Hack Someone
 
 _18 min read · January 31, 2026 · by qs18_
 
