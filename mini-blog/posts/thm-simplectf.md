@@ -1,6 +1,6 @@
 # TryHackMe - Simple CTF (Write-Up)
 
-_6 min read · February 18, 2026 · by qs18_
+_4 min read · February 18, 2026 · by qs18_
 
 ---
 
