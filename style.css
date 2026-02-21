@@ -932,7 +932,7 @@ footer {
 
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 1.5rem;
+          gap: clamp(12px, 1.5vw, 1.5rem);
         }
 
         .blog-post-card {

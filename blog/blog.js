@@ -142,3 +142,77 @@ function setupCardHoverEffect() {
 }
 
 document.addEventListener("DOMContentLoaded", loadBlogPosts);
+
+// // Setup search and filters
+// function setupFilters(posts) {
+//   const navContainer = document.querySelector(".blog-nav");
+
+//   navContainer.innerHTML = `
+//     <div class="blog-search">
+//       <input type="text" id="blog-search-input" placeholder="Search posts...">
+//       <i class="fa-solid fa-search"></i>
+//     </div>
+//     <div class="blog-filter">
+//       <select id="blog-filter-select">
+//         <option value="all">All Tags</option>
+//         ${getAllTags(posts)
+//           .map((tag) => `<option value="${tag}">${tag}</option>`)
+//           .join("")}
+//       </select>
+//     </div>
+//   `;
+
+//   // Search functionality
+//   const searchInput = document.getElementById("blog-search-input");
+//   searchInput.addEventListener("input", (e) => {
+//     filterPosts(
+//       posts,
+//       e.target.value,
+//       document.getElementById("blog-filter-select").value,
+//     );
+//   });
+
+//   // Filter functionality
+//   const filterSelect = document.getElementById("blog-filter-select");
+//   filterSelect.addEventListener("change", (e) => {
+//     filterPosts(posts, searchInput.value, e.target.value);
+//   });
+// }
+
+// // Get all unique tags
+// function getAllTags(posts) {
+//   const tags = new Set();
+//   posts.forEach((post) => {
+//     post.tags.forEach((tag) => tags.add(tag));
+//   });
+//   return Array.from(tags).sort();
+// }
+
+// // Filter posts by search and tag
+// function filterPosts(posts, searchTerm, selectedTag) {
+//   let filtered = posts;
+
+//   // Filter by search term
+//   if (searchTerm) {
+//     filtered = filtered.filter(
+//       (post) =>
+//         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+//         post.description.toLowerCase().includes(searchTerm.toLowerCase()),
+//     );
+//   }
+
+//   // Filter by tag
+//   if (selectedTag && selectedTag !== "all") {
+//     filtered = filtered.filter((post) => post.tags.includes(selectedTag));
+//   }
+
+//   // Re-group and display
+//   const postsByYear = groupPostsByYear(filtered);
+//   displayPosts(postsByYear);
+
+//   // Show "no results" message if empty
+//   if (filtered.length === 0) {
+//     document.querySelector(".blog-posts").innerHTML =
+//       '<p style="color: var(--grey); text-align: center; margin-top: 2rem;">No posts found.</p>';
+//   }
+// }

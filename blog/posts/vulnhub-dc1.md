@@ -1,6 +1,6 @@
 # VulnHub - DC: 1 (Write-Up)
 
-_8 min read · February 5, 2026 · by qs18_
+_8 min read · December 28, 2025 · by qs18_
 
 ---
 
