@@ -82,6 +82,8 @@ function displayPosts(groupedAndSorted) {
       blogPosts.appendChild(hr);
     }
   });
+
+  setupCardHoverEffect();
 }
 
 // Create individual post card
@@ -89,8 +91,8 @@ function createPostCard(post) {
   const card = document.createElement("a");
   card.href = `./post.html?post=${post.slug}`;
   card.className = "blog-post-card";
+  card.dataset.read = post.read;
 
-  // Format date
   const date = new Date(post.date);
   const formattedDate = date.toLocaleDateString("en-US", {
     month: "short",
@@ -100,10 +102,7 @@ function createPostCard(post) {
   card.innerHTML = `
     <div class="blog-post-header">
       <h3 class="blog-post-title">${post.title}</h3>
-      <div class="blog-post-meta">
-        <span class="blog-post-date">${formattedDate}</span>
-        <span class="blog-post-read">${post.read}</span>
-      </div>
+      <div class="blog-post-meta">${formattedDate}</div>
     </div>
     <p class="blog-post-description">${post.description}</p>
   `;
@@ -111,79 +110,35 @@ function createPostCard(post) {
   return card;
 }
 
-// // Setup search and filters
-// function setupFilters(posts) {
-//   const navContainer = document.querySelector(".blog-nav");
+// Hover date to read time
+function setupCardHoverEffect() {
+  const blogCards = document.querySelectorAll(".blog-post-card");
 
-//   navContainer.innerHTML = `
-//     <div class="blog-search">
-//       <input type="text" id="blog-search-input" placeholder="Search posts...">
-//       <i class="fa-solid fa-search"></i>
-//     </div>
-//     <div class="blog-filter">
-//       <select id="blog-filter-select">
-//         <option value="all">All Tags</option>
-//         ${getAllTags(posts)
-//           .map((tag) => `<option value="${tag}">${tag}</option>`)
-//           .join("")}
-//       </select>
-//     </div>
-//   `;
+  blogCards.forEach((card) => {
+    const blogMeta = card.querySelector(".blog-post-meta");
+    const originalDate = blogMeta.textContent;
+    const readTime = card.dataset.read;
 
-//   // Search functionality
-//   const searchInput = document.getElementById("blog-search-input");
-//   searchInput.addEventListener("input", (e) => {
-//     filterPosts(
-//       posts,
-//       e.target.value,
-//       document.getElementById("blog-filter-select").value,
-//     );
-//   });
+    card.addEventListener("mouseenter", () => {
+      blogMeta.style.opacity = "0";
+      blogMeta.style.transform = "translateY(-20px)";
+      setTimeout(() => {
+        blogMeta.textContent = readTime;
+        blogMeta.style.opacity = "1";
+        blogMeta.style.transform = "translateY(0)";
+      }, 150);
+    });
 
-//   // Filter functionality
-//   const filterSelect = document.getElementById("blog-filter-select");
-//   filterSelect.addEventListener("change", (e) => {
-//     filterPosts(posts, searchInput.value, e.target.value);
-//   });
-// }
+    card.addEventListener("mouseleave", () => {
+      blogMeta.style.opacity = "0";
+      blogMeta.style.transform = "translateY(-20px)";
+      setTimeout(() => {
+        blogMeta.textContent = originalDate;
+        blogMeta.style.opacity = "1";
+        blogMeta.style.transform = "translateY(0)";
+      }, 150);
+    });
+  });
+}
 
-// // Get all unique tags
-// function getAllTags(posts) {
-//   const tags = new Set();
-//   posts.forEach((post) => {
-//     post.tags.forEach((tag) => tags.add(tag));
-//   });
-//   return Array.from(tags).sort();
-// }
-
-// // Filter posts by search and tag
-// function filterPosts(posts, searchTerm, selectedTag) {
-//   let filtered = posts;
-
-//   // Filter by search term
-//   if (searchTerm) {
-//     filtered = filtered.filter(
-//       (post) =>
-//         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-//         post.description.toLowerCase().includes(searchTerm.toLowerCase()),
-//     );
-//   }
-
-//   // Filter by tag
-//   if (selectedTag && selectedTag !== "all") {
-//     filtered = filtered.filter((post) => post.tags.includes(selectedTag));
-//   }
-
-//   // Re-group and display
-//   const postsByYear = groupPostsByYear(filtered);
-//   displayPosts(postsByYear);
-
-//   // Show "no results" message if empty
-//   if (filtered.length === 0) {
-//     document.querySelector(".blog-posts").innerHTML =
-//       '<p style="color: var(--grey); text-align: center; margin-top: 2rem;">No posts found.</p>';
-//   }
-// }
-
-// Load posts when page loads
 document.addEventListener("DOMContentLoaded", loadBlogPosts);

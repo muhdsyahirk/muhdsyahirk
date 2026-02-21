@@ -33,34 +33,6 @@ function changeBurgerCross() {
   }
 }
 
-// BLOG
-// const blogLinks = document.querySelectorAll(".blog-content ul li a");
-// blogLinks.forEach((link) => {
-//   const blogLinkSpan = link.querySelector(".blog-link");
-//   const blogYear = blogLinkSpan.innerHTML;
-//   const blogArrow = '<i class="fa-solid fa-arrow-right-long"></i>';
-
-//   link.addEventListener("mouseenter", () => {
-//     blogLinkSpan.style.opacity = "0";
-//     blogLinkSpan.style.transform = "translateX(-85%)";
-//     setTimeout(() => {
-//       blogLinkSpan.innerHTML = blogArrow;
-//       blogLinkSpan.style.opacity = "1";
-//       blogLinkSpan.style.transform = "translateX(0)";
-//     }, 150);
-//   });
-
-//   link.addEventListener("mouseleave", () => {
-//     blogLinkSpan.style.opacity = "0";
-//     blogLinkSpan.style.transform = "translateX(-85%)";
-//     setTimeout(() => {
-//       blogLinkSpan.innerHTML = blogYear;
-//       blogLinkSpan.style.opacity = "1";
-//       blogLinkSpan.style.transform = "translateX(0)";
-//     }, 150);
-//   });
-// });
-
 // SKILLS INFINITE SCROLL
 const scroller = document.querySelectorAll(".scroller");
 

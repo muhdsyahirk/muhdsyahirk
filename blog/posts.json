@@ -12,8 +12,8 @@
     "title": "How to Steal Someone Else's Wi-Fi",
     "date": "2025-08-19",
     "read": "10 min",
-    "description": "A guide on Wi-Fi security and common vulnerabilities.",
-    "tags": ["security", "wifi", "hacking"],
+    "description": "An outdated guide on Wi-Fi security and vulnerabilities.",
+    "tags": ["security", "wifi", "hacking", "cracking", "WEP", "WPA", "WPS"],
     "slug": "steal-wifi",
     "file": "./posts/how-to-steal-wifi.md"
   },
@@ -21,7 +21,7 @@
     "title": "3 Ways of How to Hack Someone",
     "date": "2026-01-31",
     "read": "18 min",
-    "description": "A guide on Client-Side hacking.",
+    "description": "A guide on Client-Side hacking using backdoor, phishing and man-in-the-middle attack.",
     "tags": ["security", "client", "hacking"],
     "slug": "hack-someone",
     "file": "./posts/how-to-hack-someone.md"
@@ -30,8 +30,8 @@
     "title": "VulnHub - DC: 1 (Write-Up)",
     "date": "2026-02-05",
     "read": "8 min",
-    "description": "DC: 1 Walkthrough.",
-    "tags": ["ctf", "red", "hacking"],
+    "description": "Drupalgeddon exploitation and SUID binary (find) abuse for privesc.",
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "vh-dc1",
     "file": "./posts/vulnhub-dc1.md"
   },
@@ -39,8 +39,8 @@
     "title": "VulnHub - DC: 2 (Write-Up)",
     "date": "2026-02-06",
     "read": "8 min",
-    "description": "DC: 2 Walkthrough.",
-    "tags": ["ctf", "red", "hacking"],
+    "description": "WordPress exploitation, shell escape and misconfigured sudo (git) privesc.",
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "vh-dc2",
     "file": "./posts/vulnhub-dc2.md"
   },
@@ -48,8 +48,8 @@
     "title": "VulnHub - DC: 3 (Write-Up)",
     "date": "2026-02-15",
     "read": "6 min",
-    "description": "DC: 3 Walkthrough.",
-    "tags": ["ctf", "red", "hacking"],
+    "description": "Joomla SQL injection and vulnerable kernel exploitation for privesc.",
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "vh-dc3",
     "file": "./posts/vulnhub-dc3.md"
   },
@@ -57,8 +57,8 @@
     "title": "VulnHub - DC: 4 (Write-Up)",
     "date": "2026-02-08",
     "read": "8 min",
-    "description": "DC: 4 Walkthrough.",
-    "tags": ["ctf", "red", "hacking"],
+    "description": "Brute-force login, command execution abuse and misconfigured sudo (tee) privesc.",
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "vh-dc4",
     "file": "./posts/vulnhub-dc4.md"
   },
@@ -66,8 +66,8 @@
     "title": "VulnHub - SickOs: 1.1 (Write-Up)",
     "date": "2026-02-10",
     "read": "8 min",
-    "description": "SickOs: 1.1 Walkthrough.",
-    "tags": ["ctf", "red", "hacking"],
+    "description": "Shellshock exploitation via CGI for RCE and reverse shell, and credential reuse.",
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "vh-sickos1-1",
     "file": "./posts/vulnhub-sickos1.1.md"
   },
@@ -75,8 +75,8 @@
     "title": "VulnHub - SickOs: 1.2 (Write-Up)",
     "date": "2026-02-12",
     "read": "6 min",
-    "description": "SickOs: 1.2 Walkthrough.",
-    "tags": ["ctf", "red", "hacking"],
+    "description": "Web shell upload, followed by cron-based privesc via vulnerable chkrootkit execution.",
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "vh-sickos1-2",
     "file": "./posts/vulnhub-sickos1.2.md"
   },
@@ -84,8 +84,8 @@
     "title": "VulnHub - Tr0ll: 1 (Write-Up)",
     "date": "2026-02-14",
     "read": "6 min",
-    "description": "Tr0ll: 1 Walkthrough.",
-    "tags": ["ctf", "red", "hacking"],
+    "description": "PCAP analysis, SSH brute-forcing, and cron privesc through writable Python script abuse.",
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "vh-troll1",
     "file": "./posts/vulnhub-troll1.md"
   },
@@ -93,8 +93,8 @@
     "title": "VulnHub - Planets: Mercury (Write-Up)",
     "date": "2026-02-16",
     "read": "6 min",
-    "description": "The Planets: Mercury Walkthrough.",
-    "tags": ["ctf", "red", "hacking"],
+    "description": "SQL injection, credential reuse and PATH hijacking via insecure sudo SETENV configuration.",
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "vh-theplanet-mercury",
     "file": "./posts/vulnhub-planet-mercury.md"
   },
@@ -102,8 +102,8 @@
     "title": "TryHackMe - Simple CTF (Write-Up)",
     "date": "2026-02-18",
     "read": "6 min",
-    "description": "TryHackMe - Simple CTF Walkthrough.",
-    "tags": ["ctf", "red", "hacking"],
+    "description": "SQL injection for vulnerable CMS version and privesc using vim.",
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "thm-simplectf",
     "file": "./posts/thm-simplectf.md"
   }

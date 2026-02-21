@@ -877,8 +877,6 @@ footer {
 /*  */
 /*  */
 .blog {
-  min-height: 100vh;
-  min-height: 100svh;
   display: flex;
   justify-content: center;
 
@@ -888,11 +886,14 @@ footer {
     align-items: center;
     margin: 100px 0 20px;
     gap: clamp(9px, 1.5vw, 37.8px);
+    /* width: 100%; */
+    /* width: 88%; */
 
     .blog-title {
-      p {
-        font-size: clamp(21px, 2vw, 33px);
+      h1 {
+        font-size: clamp(1.4rem, 3vw, 2.18rem);
         font-weight: bold;
+        text-align: center;
         color: var(--white);
         text-transform: uppercase;
       }
@@ -901,7 +902,7 @@ footer {
     .blog-row {
       display: flex;
       justify-content: center;
-      width: 80%;
+      /* width: 80%; NANTI SET FIXED WIDTH FOR LARGER SCREEN*/
 
       .blog-nav {
         height: 50px;
@@ -911,7 +912,7 @@ footer {
       }
 
       .blog-posts {
-        width: 90%;
+        /* width: 90%; */
         padding: 20px 0;
 
         .blog-year {
@@ -919,27 +920,31 @@ footer {
 
           h2 {
             color: var(--white);
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-weight: 700;
+            font-size: clamp(1.25rem, 2.5vw, 2rem);
+            font-weight: bold;
           }
         }
 
         .blog-year-posts {
-          display: flex;
-          flex-wrap: wrap;
+          /* display: flex;
+          flex-direction: column;
+          gap: 1.5rem; */
+
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
           gap: 1.5rem;
         }
 
         .blog-post-card {
-          /* display: block; */
-          padding: 1.5rem;
-          background: rgba(255, 255, 255, 0.03);
+          padding: 1.25rem;
+          background: rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(2.3px);
+          -webkit-backdrop-filter: blur(2.3px);
           border: 1px solid rgba(231, 14, 6, 0.2);
           border-radius: 10px;
+          max-width: 435.1px;
           text-decoration: none;
           transition: all 0.3s;
-          /* flex: 1;
-          min-width: 280px; */
 
           &:hover {
             border-color: var(--red);
@@ -950,51 +955,36 @@ footer {
         .blog-post-header {
           display: flex;
           justify-content: space-between;
-          /* align-items: flex-start; */
+          align-items: center;
           gap: 1rem;
           margin-bottom: 0.75rem;
         }
 
         .blog-post-title {
           color: var(--white);
-          font-size: clamp(1.1rem, 2vw, 1.3rem);
+          font-size: clamp(1rem, 2vw, 1.3rem);
           font-weight: 600;
           margin: 0;
+          line-height: 1.3;
         }
 
         .blog-post-meta {
           display: flex;
           flex-direction: column;
-          /* gap: 1rem; */
-          /* flex-shrink: 0; */
+          flex-shrink: 0;
           font-size: 0.85rem;
-          /* color: var(--grey); */
           color: var(--red);
           text-align: right;
+          transition:
+            opacity 0.15s,
+            transform 0.15s;
         }
 
         .blog-post-description {
-          color: #b0b0b0;
-          font-size: 0.95rem;
-          line-height: 1.6;
-          /* margin-bottom: 1rem; */
+          color: var(--grey);
+          font-size: 0.93rem;
+          line-height: 1.3;
         }
-
-        /* .blog-post-tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.5rem;
-        }
-
-        .blog-tag {
-          padding: 0.25rem 0.75rem;
-          background: rgba(231, 14, 6, 0.15);
-          border: 1px solid rgba(231, 14, 6, 0.3);
-          border-radius: 20px;
-          color: var(--red);
-          font-size: 0.75rem;
-          text-transform: lowercase;
-        } */
 
         .blog-divider {
           margin: 3rem 0;
@@ -1005,15 +995,33 @@ footer {
     }
   }
   @media (max-width: 768px) {
-    .blog-post-header {
-      flex-direction: column;
-    }
+    .blog-blog {
+      .blog-row {
+        width: 88%;
 
-    .blog-post-meta {
-      align-self: flex-start;
+        .blog-nav {
+          display: none;
+        }
+
+        .blog-posts {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media (max-width: 1100px) {
+    .blog-blog {
+      .blog-row {
+        .blog-posts {
+          .blog-year-posts {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
     }
   }
 }
+
 /*  */
 /*  */
 /*  */
