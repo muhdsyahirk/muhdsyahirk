@@ -1,21 +1,23 @@
+let allPosts = [];
+
 // Fetch and display blog posts
 async function loadBlogPosts() {
   try {
     const response = await fetch("./posts.json");
     const posts = await response.json();
 
+    allPosts = posts;
+
     // Group posts by year
     const groupedAndSorted = groupAndSort(posts);
 
     // Display posts
     displayPosts(groupedAndSorted);
-
-    // Setup search/filter
-    // setupFilters(posts);
   } catch (error) {
     console.error("Error loading posts:", error);
-    document.querySelector(".blog-posts").innerHTML =
-      '<p style="color: var(--grey);">Failed to load posts. Please try again later.</p>';
+    document.querySelector(".blog-posts").innerHTML = `
+    <div class="blog-post-error-load"><h2>Failed to load posts. Please try again later.</h2></div>
+    `;
   }
 }
 
@@ -141,78 +143,118 @@ function setupCardHoverEffect() {
   });
 }
 
+// TERMINAL
+const terminalInput = document.getElementById("terminal-input");
+const terminalOutput = document.querySelector(".terminal-output");
+
+terminalInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    terminalOutput.innerHTML = "";
+    const commandRaw = terminalInput.value.toLowerCase();
+    const command = terminalInput.value.trim().toLowerCase();
+    terminalInput.value = "";
+
+    if (command === "help") {
+      terminalOutput.textContent =
+        "Use 'find' to search/filter posts. Type 'find -h' for more information.\n\nAvailable commands:\nfind\tSearch or filter posts\nls\tList directory contents\ncat\tConcat files to stdout\nwhoami\tPrint effective user name\npwd\tPrint name of current dir\nclear\tClear terminal screen";
+      return;
+    } else if (command === "whoami") {
+      terminalOutput.textContent = "recruiter? visitor? stalker?";
+      return;
+    } else if (command === "id") {
+      terminalOutput.textContent =
+        "uid=1000(visitor) gid=1000(visitor) groups=1000(visitor)";
+      return;
+    } else if (command === "ls") {
+      terminalOutput.textContent = "readme.txt flag.txt";
+      return;
+    } else if (command === "pwd") {
+      terminalOutput.textContent = "/muhdsyahirk/blog/";
+      return;
+    } else if (commandRaw.startsWith("cat ")) {
+      const fileName = command.substring(4);
+      if (fileName === "readme.txt") {
+        terminalOutput.textContent =
+          "Hi, this terminal is static, meaning it only accepts predefined input and prints predefined output. Nothing special here :(";
+        return;
+      } else if (fileName === "flag.txt") {
+        terminalOutput.textContent = "flag{h3ll0_v1s1t0r}";
+        return;
+      } else {
+        terminalOutput.textContent = `cat: ${fileName}: No such file or directory`;
+        return;
+      }
+    } else if (commandRaw.startsWith("find ")) {
+      const searchQuery = command.substring(5);
+      if (searchQuery === "-h") {
+        terminalOutput.textContent =
+          "NAME\n  find - search or filter posts\n\nSYNOPSIS\n  find <SEARCH_QUERY>\n\nEXAMPLE\n  find all\n  find red easy tryhackme\n  find vulnhub boot2root 2025";
+        return;
+      } else {
+        const resultsCount = searchPosts(searchQuery);
+
+        if (resultsCount > 0) {
+          terminalOutput.textContent = `Found ${resultsCount} post(s) matching: ${searchQuery}`;
+        } else {
+          terminalOutput.textContent = `No posts found matching: ${searchQuery}`;
+        }
+
+        return;
+      }
+    } else if (command === "clear") {
+      terminalOutput.innerHTML = "";
+      terminalInput.value = "";
+      return;
+    } else {
+      terminalOutput.textContent = `bash: ${command}: command not found`;
+      return;
+    }
+  }
+});
+
+function searchPosts(searchQuery) {
+  // Split searchQuery into keywords (1 per 1)
+  const keywords = searchQuery
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((k) => k.length > 0);
+
+  // No keywords/all, show all posts
+  if (keywords.length === 0 || keywords.includes("all")) {
+    const groupedAndSorted = groupAndSort(allPosts);
+    displayPosts(groupedAndSorted);
+    return allPosts.length;
+  }
+
+  // Filter -> Loop all posts, runs test function, if true = keep post in results
+  const results = allPosts.filter((post) => {
+    // Combine title, description, and tags into one string
+    const searchableText = `
+      ${post.title} 
+      ${post.description} 
+      ${post.tags.join(" ")}
+      ${new Date(post.date).getFullYear()}
+    `.toLowerCase();
+
+    // Check if ALL keywords exist in searchable text
+    return keywords.every((keyword) => searchableText.includes(keyword));
+  });
+
+  // Display filtered results
+  if (results.length > 0) {
+    const groupedAndSorted = groupAndSort(results);
+    displayPosts(groupedAndSorted);
+  } else {
+    document.querySelector(".blog-posts").innerHTML = `
+    <div class="blog-post-no-matching">
+    <i class="fa-solid fa-search"></i>
+    <p>No posts found matching: <span style="color: var(--red);">"${searchQuery}"</span></p>
+    <p>Try different keywords or type 'find all' to list all posts.</p>
+    </div>
+    `;
+  }
+
+  return results.length;
+}
+
 document.addEventListener("DOMContentLoaded", loadBlogPosts);
-
-// // Setup search and filters
-// function setupFilters(posts) {
-//   const navContainer = document.querySelector(".blog-nav");
-
-//   navContainer.innerHTML = `
-//     <div class="blog-search">
-//       <input type="text" id="blog-search-input" placeholder="Search posts...">
-//       <i class="fa-solid fa-search"></i>
-//     </div>
-//     <div class="blog-filter">
-//       <select id="blog-filter-select">
-//         <option value="all">All Tags</option>
-//         ${getAllTags(posts)
-//           .map((tag) => `<option value="${tag}">${tag}</option>`)
-//           .join("")}
-//       </select>
-//     </div>
-//   `;
-
-//   // Search functionality
-//   const searchInput = document.getElementById("blog-search-input");
-//   searchInput.addEventListener("input", (e) => {
-//     filterPosts(
-//       posts,
-//       e.target.value,
-//       document.getElementById("blog-filter-select").value,
-//     );
-//   });
-
-//   // Filter functionality
-//   const filterSelect = document.getElementById("blog-filter-select");
-//   filterSelect.addEventListener("change", (e) => {
-//     filterPosts(posts, searchInput.value, e.target.value);
-//   });
-// }
-
-// // Get all unique tags
-// function getAllTags(posts) {
-//   const tags = new Set();
-//   posts.forEach((post) => {
-//     post.tags.forEach((tag) => tags.add(tag));
-//   });
-//   return Array.from(tags).sort();
-// }
-
-// // Filter posts by search and tag
-// function filterPosts(posts, searchTerm, selectedTag) {
-//   let filtered = posts;
-
-//   // Filter by search term
-//   if (searchTerm) {
-//     filtered = filtered.filter(
-//       (post) =>
-//         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-//         post.description.toLowerCase().includes(searchTerm.toLowerCase()),
-//     );
-//   }
-
-//   // Filter by tag
-//   if (selectedTag && selectedTag !== "all") {
-//     filtered = filtered.filter((post) => post.tags.includes(selectedTag));
-//   }
-
-//   // Re-group and display
-//   const postsByYear = groupPostsByYear(filtered);
-//   displayPosts(postsByYear);
-
-//   // Show "no results" message if empty
-//   if (filtered.length === 0) {
-//     document.querySelector(".blog-posts").innerHTML =
-//       '<p style="color: var(--grey); text-align: center; margin-top: 2rem;">No posts found.</p>';
-//   }
-// }
