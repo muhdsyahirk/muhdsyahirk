@@ -3,7 +3,7 @@
     "title": "My First Post",
     "date": "2025-08-18",
     "read": "2 min",
-    "description": "Introduction to my blog posts and a little bit about me.",
+    "description": "Introduction to my blog posts and a little bit about me :D",
     "tags": ["intro", "first"],
     "slug": "first-post",
     "file": "./posts/first-post.md"
@@ -102,7 +102,7 @@
     "title": "TryHackMe - Simple CTF (Write-Up)",
     "date": "2026-02-18",
     "read": "6 min",
-    "description": "SQL injection for vulnerable CMS version and privesc using vim.",
+    "description": "SQL injection for vulnerable CMS version and privesc using vim text editor.",
     "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "thm-simplectf",
     "file": "./posts/thm-simplectf.md"

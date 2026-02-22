@@ -175,7 +175,7 @@ terminalInput.addEventListener("keydown", (e) => {
       const fileName = command.substring(4);
       if (fileName === "readme.txt") {
         terminalOutput.textContent =
-          "Hi, this terminal is static, meaning it only accepts predefined input and prints predefined output. Nothing special here :(";
+          "Hello there, this is a fake Linux terminal, it only accepts predefined input and prints predefined output. Nothing special here :(";
         return;
       } else if (fileName === "flag.txt") {
         terminalOutput.textContent = "flag{h3ll0_v1s1t0r}";
