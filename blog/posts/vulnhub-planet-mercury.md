@@ -8,7 +8,7 @@ _6 min read · February 16, 2026 · by qs18_
 
 In this mini-blog, I’ll be showing you the walkthrough for [**The Planets: Mercury**](https://www.vulnhub.com/entry/the-planets-mercury,544/) machine from [**VulnHub**](https://www.vulnhub.com/about/).
 
-- Goal: Obtain User and Root Flag.
+- Goal: Obtain User and Root Flag
 - Difficulty: Easy
 - Machine Author: SirFlash
 

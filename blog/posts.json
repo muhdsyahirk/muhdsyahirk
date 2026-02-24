@@ -99,12 +99,21 @@
     "file": "./posts/vulnhub-planet-mercury.md"
   },
   {
-    "title": "TryHackMe - Simple CTF (Write-Up)",
+    "title": "THM - Simple CTF (Write-Up)",
     "date": "2026-02-18",
-    "read": "6 min",
+    "read": "4 min",
     "description": "SQL injection for vulnerable CMS version and privesc using vim text editor.",
-    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "thm-simplectf",
     "file": "./posts/thm-simplectf.md"
+  },
+  {
+    "title": "THM - Basic Pentesting (Write-Up)",
+    "date": "2026-02-24",
+    "read": "5 min",
+    "description": "SMB user enumeration, SSH brute-force on weak credentials, lateral movement via exposed SSH private key.",
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "slug": "thm-basicpentesting",
+    "file": "./posts/thm-basicpentesting.md"
   }
 ]

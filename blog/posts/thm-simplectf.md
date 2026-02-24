@@ -8,7 +8,7 @@ _4 min read · February 18, 2026 · by qs18_
 
 In this mini-blog, I’ll be showing you the walkthrough for [**Simple CTF**](https://tryhackme.com/room/easyctf) machine from [**TryHackMe**](https://tryhackme.com/).
 
-- Goal: Obtain User and Root Flag.
+- Goal: Obtain User and Root Flag
 - Difficulty: Easy
 - Machine Author: MrSeth6797
 
