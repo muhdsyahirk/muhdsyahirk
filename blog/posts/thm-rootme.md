@@ -6,7 +6,7 @@ _4 min read · February 26, 2026 · by qs18_
 
 ## Entry Log
 
-In this mini-blog, I’ll be showing you the walkthrough for [**Basic Pentesting**](https://tryhackme.com/room/basicpentestingjt) machine from [**TryHackMe**](https://tryhackme.com/).
+In this mini-blog, I’ll be showing you the walkthrough for [**RootMe**](https://tryhackme.com/room/rrootme) machine from [**TryHackMe**](https://tryhackme.com/).
 
 - Goal: Become Root
 - Difficulty: Easy
