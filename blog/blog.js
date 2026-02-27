@@ -63,7 +63,19 @@ function displayPosts(groupedAndSorted) {
     // Year
     const yearHeading = document.createElement("div");
     yearHeading.className = "blog-year";
-    yearHeading.innerHTML = `<h2>${year}</h2>`;
+    yearHeading.innerHTML = `
+    <h2>
+    ${year} 
+    <i class="fa-solid fa-chevron-down year-icon"></i>
+    </h2>
+    `;
+
+    // Year dropdown
+    yearHeading.addEventListener("click", () => {
+      postsContainer.classList.toggle("collapsed");
+      yearHeading.querySelector(".year-icon").classList.toggle("rotated");
+    });
+
     blogPosts.appendChild(yearHeading);
 
     // Posts container

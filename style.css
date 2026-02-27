@@ -902,11 +902,30 @@ footer {
 
         .blog-year {
           margin: 0 0 1.5rem;
+          cursor: pointer;
+          user-select: none;
+          color: var(--white);
+          /* transition: color 0.3s;
+
+          &:hover {
+            color: var(--red);
+          } */
 
           h2 {
-            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
             font-size: clamp(1.25rem, 2.5vw, 2rem);
             font-weight: bold;
+          }
+
+          .year-icon {
+            font-size: clamp(0.65rem, 1.5vw, 0.8rem);
+            transition: transform 0.3s;
+
+            &.rotated {
+              transform: rotate(-180deg);
+            }
           }
         }
 
@@ -914,6 +933,20 @@ footer {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           gap: clamp(12px, 1.5vw, 1.5rem);
+
+          max-height: 5000px;
+          opacity: 1;
+          overflow: visible;
+          transition:
+            max-height 0.5s ease,
+            opacity 0.3s ease;
+
+          &.collapsed {
+            max-height: 0;
+            opacity: 0;
+            margin: 0;
+            overflow: hidden;
+          }
         }
 
         .blog-post-card {
@@ -990,7 +1023,9 @@ footer {
           width: 100%;
 
           .blog-year {
-            text-align: center;
+            h2 {
+              justify-content: center;
+            }
           }
 
           .blog-post-card {
