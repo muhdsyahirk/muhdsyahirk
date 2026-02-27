@@ -124,5 +124,14 @@
     "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "thm-easypeasy",
     "file": "./posts/thm-easypeasy.md"
+  },
+  {
+    "title": "THM - RootMe (Write-Up)",
+    "date": "2026-02-26",
+    "read": "4 min",
+    "description": "Bypass restricted PHP file upload for RCE and privesc through SUID Python binary abuse.",
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "slug": "thm-rootme",
+    "file": "./posts/thm-rootme.md"
   }
 ]
