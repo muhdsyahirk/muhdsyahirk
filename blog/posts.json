@@ -135,6 +135,15 @@
     "file": "./posts/thm-rootme.md"
   },
   {
+    "title": "THM - Publisher (Write-Up)",
+    "date": "2026-02-28",
+    "read": "6 min",
+    "description": "SPIP 4.2.0 unauthenticated RCE and privesc via writable root-executed script with AppArmor bypass.",
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "slug": "thm-publisher",
+    "file": "./posts/thm-publisher.md"
+  },
+  {
     "title": "THM - Lazy Admin (Write-Up)",
     "date": "2026-03-01",
     "read": "5 min",
