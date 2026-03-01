@@ -133,5 +133,14 @@
     "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "thm-rootme",
     "file": "./posts/thm-rootme.md"
+  },
+  {
+    "title": "THM - Lazy Admin (Write-Up)",
+    "date": "2026-03-01",
+    "read": "5 min",
+    "description": "Exposed CMS backup file, file upload for RCE and privesc via writable root-executed Perl script.",
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "slug": "thm-lazyadmin",
+    "file": "./posts/thm-lazyadmin.md"
   }
 ]
