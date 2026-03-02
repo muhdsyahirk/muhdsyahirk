@@ -934,18 +934,18 @@ footer {
           grid-template-columns: repeat(2, 1fr);
           gap: clamp(12px, 1.5vw, 1.5rem);
 
-          max-height: 5000px;
           opacity: 1;
           overflow: visible;
-          transition:
-            max-height 0.5s ease,
-            opacity 0.3s ease;
+          transition: opacity 0.3s ease;
 
           &.collapsed {
             max-height: 0;
             opacity: 0;
             margin: 0;
             overflow: hidden;
+            transition:
+              max-height 0.3s ease,
+              opacity 0.3s ease;
           }
         }
 
