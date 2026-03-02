@@ -63,6 +63,8 @@ function displayPosts(groupedAndSorted) {
     // Year
     const yearHeading = document.createElement("div");
     yearHeading.className = "blog-year";
+    yearHeading.id = `year-${year}`;
+    yearHeading.dataset.year = year;
     yearHeading.innerHTML = `
     <h2>
     ${year} 
@@ -98,6 +100,7 @@ function displayPosts(groupedAndSorted) {
   });
 
   setupCardHoverEffect();
+  generateYearLinks(groupedAndSorted);
 }
 
 // Create individual post card
@@ -267,6 +270,32 @@ function searchPosts(searchQuery) {
   }
 
   return results.length;
+}
+
+function generateYearLinks(groupedAndSorted) {
+  const yearLinksContainer = document.getElementById("year-links");
+
+  if (!yearLinksContainer) return;
+
+  yearLinksContainer.innerHTML = "";
+
+  groupedAndSorted.forEach(([year]) => {
+    const link = document.createElement("a");
+    link.href = `#year-${year}`;
+    link.className = "year-link";
+    link.textContent = year;
+    link.dataset.year = year;
+
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetSection = document.getElementById(`year-${year}`);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+
+    yearLinksContainer.appendChild(link);
+  });
 }
 
 document.addEventListener("DOMContentLoaded", loadBlogPosts);

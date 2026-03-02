@@ -43,28 +43,34 @@
         </div>
         <div class="blog-row">
           <div class="blog-nav">
-            <div class="terminal-header">
-              <div class="terminal-header-left">
-                <i class="fa-solid fa-terminal"></i>
+            <div class="terminal-nav">
+              <div class="terminal-header">
+                <div class="terminal-header-left">
+                  <i class="fa-solid fa-terminal"></i>
+                </div>
+                <div class="terminal-header-mid">syahir@blog: ~</div>
+                <div class="terminal-header-right">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
               </div>
-              <div class="terminal-header-mid">syahir@blog: ~</div>
-              <div class="terminal-header-right">
-                <i class="fa-solid fa-xmark"></i>
+              <div class="terminal-body">
+                <div class="terminal-prompt">
+                  <span class="terminal-sign">$</span>
+                  <input
+                    type="text"
+                    id="terminal-input"
+                    placeholder="Type 'help' to get started"
+                    autofocus
+                    autocomplete="off"
+                    spellcheck="false"
+                  />
+                </div>
+                <div class="terminal-output"></div>
               </div>
             </div>
-            <div class="terminal-body">
-              <div class="terminal-prompt">
-                <span class="terminal-sign">$</span>
-                <input
-                  type="text"
-                  id="terminal-input"
-                  placeholder="Type 'help' to get started"
-                  autofocus
-                  autocomplete="off"
-                  spellcheck="false"
-                />
-              </div>
-              <div class="terminal-output"></div>
+            <div class="year-nav">
+              <h3>Jump to...</h3>
+              <div class="year-links" id="year-links"></div>
             </div>
           </div>
           <div class="blog-posts"></div>

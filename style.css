@@ -822,60 +822,98 @@ footer {
         position: sticky;
         top: 100px;
         margin-top: 20px;
-        width: 330px;
-        height: 250px;
-        border-radius: 8px;
-        border: 1px solid #333;
-        background-color: var(--black);
 
-        .terminal-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background-color: var(--red);
-          /* background-color: rgba(231, 14, 6, 0.2); */
-          border-radius: 8px 8px 0 0;
-          padding: 8px 12px;
-          color: var(--black);
-          font-size: 15px;
+        .terminal-nav {
+          width: 330px;
+          height: 250px;
+          border-radius: 8px;
+          border: 1px solid #333;
+          background-color: var(--black);
 
-          .terminal-header-left {
-            font-size: 12px;
-          }
-        }
-
-        .terminal-body {
-          padding: 12px;
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-
-          .terminal-prompt {
+          .terminal-header {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--red);
+            /* background-color: rgba(231, 14, 6, 0.2); */
+            border-radius: 8px 8px 0 0;
+            padding: 8px 12px;
+            color: var(--black);
+            font-size: 15px;
+
+            .terminal-header-left {
+              font-size: 12px;
+            }
+          }
+
+          .terminal-body {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
             gap: 8px;
 
-            .terminal-sign {
-              color: var(--red);
-              font-weight: bold;
+            .terminal-prompt {
+              display: flex;
+              gap: 8px;
+
+              .terminal-sign {
+                color: var(--red);
+                font-weight: bold;
+              }
+
+              #terminal-input {
+                background: transparent;
+                border: none;
+                outline: none;
+                color: var(--white);
+                font-family: "Fira Code", "Courier New", monospace;
+                font-size: 14px;
+                flex: 1;
+              }
             }
 
-            #terminal-input {
-              background: transparent;
-              border: none;
-              outline: none;
+            .terminal-output {
               color: var(--white);
               font-family: "Fira Code", "Courier New", monospace;
               font-size: 14px;
-              flex: 1;
+              white-space: pre;
+              text-wrap: wrap;
             }
           }
+        }
 
-          .terminal-output {
+        .year-nav {
+          margin-top: 1.8rem;
+          display: flex;
+          /* justify-content: space-between; */
+          justify-content: space-evenly;
+
+          h3 {
+            margin-left: 1rem;
             color: var(--white);
-            font-family: "Fira Code", "Courier New", monospace;
-            font-size: 14px;
-            white-space: pre;
-            text-wrap: wrap;
+          }
+
+          .year-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .year-link {
+              color: var(--white);
+              text-decoration: none;
+              transition: all 0.3s;
+              font-size: 1.3rem;
+              font-weight: bold;
+              /* text-align: right; */
+              margin-right: 1rem;
+              padding-right: 0.5rem;
+              border-right: 2px solid transparent;
+
+              &:hover {
+                color: var(--red);
+                border-right: 2px solid var(--red);
+              }
+            }
           }
         }
       }
