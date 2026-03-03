@@ -273,13 +273,16 @@ function searchPosts(searchQuery) {
 }
 
 function generateYearLinks(groupedAndSorted) {
-  const yearLinksContainer = document.getElementById("year-links");
+  const yearNav = document.getElementById("year-nav");
 
-  if (!yearLinksContainer) return;
+  if (!yearNav) return;
 
-  yearLinksContainer.innerHTML = "";
+  yearNav.innerHTML = "";
 
-  groupedAndSorted.forEach(([year]) => {
+  groupedAndSorted.forEach(([year], index) => {
+    const yearLinks = document.createElement("div");
+    yearLinks.className = "year-links";
+
     const link = document.createElement("a");
     link.href = `#year-${year}`;
     link.className = "year-link";
@@ -294,7 +297,29 @@ function generateYearLinks(groupedAndSorted) {
       }
     });
 
-    yearLinksContainer.appendChild(link);
+    yearLinks.appendChild(link);
+
+    const yearTimeline = document.createElement("div");
+    yearTimeline.className = "year-timeline";
+
+    const lineTop = document.createElement("div");
+    lineTop.className = "year-timeline-line-top";
+    const circle = document.createElement("div");
+    circle.className = "year-timeline-circle";
+    const lineBot = document.createElement("div");
+    lineBot.className = "year-timeline-line-bot";
+
+    if (index === groupedAndSorted.length - 1) {
+      lineBot.style.backgroundColor = "transparent";
+    }
+
+    yearTimeline.appendChild(lineTop);
+    yearTimeline.appendChild(circle);
+    yearTimeline.appendChild(lineBot);
+
+    yearLinks.appendChild(yearTimeline);
+
+    yearNav.appendChild(yearLinks);
   });
 }
 
