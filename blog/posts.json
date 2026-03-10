@@ -160,5 +160,14 @@
     "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "thm-picklerick",
     "file": "./posts/thm-picklerick.md"
+  },
+  {
+    "title": "THM - Billing (Write-Up)",
+    "date": "2026-03-10",
+    "read": "4 min",
+    "description": "MagnusBilling command injection for RCE and privesc via sudo fail2ban-client abuse.",
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "slug": "thm-billing",
+    "file": "./posts/thm-billing.md"
   }
 ]
