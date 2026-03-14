@@ -73,7 +73,7 @@ I accessed `/tmp` directory but didn't find `injected.txt` (maybe I was wrong).
 
 However, I still attempted to gain a reverse shell.
 
-I set up listener using [netcat](https://www.kali.org/tools/netcat/):
+I set up listener using [**netcat**](https://www.kali.org/tools/netcat/):
 
 ```bash
 nc -lvp 4418
