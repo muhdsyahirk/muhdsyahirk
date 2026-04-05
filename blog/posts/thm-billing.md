@@ -177,6 +177,8 @@ I then navigated to `/root` and retrieved the **root flag**.
 
 ![Root Flag](./img/thm-billing/root-flag.png)
 
+Bomba! Settleee.
+
 ---
 
 ## Session Terminated

@@ -169,5 +169,14 @@
     "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "thm-billing",
     "file": "./posts/thm-billing.md"
+  },
+  {
+    "title": "THM - Startup (Write-Up)",
+    "date": "2026-04-01",
+    "read": "5 min",
+    "description": "FTP anon upload for RCE, PCAP credential reuse and privesc via writable root-executed cron script.",
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "slug": "thm-startup",
+    "file": "./posts/thm-startup.md"
   }
 ]
