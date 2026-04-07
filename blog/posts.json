@@ -174,9 +174,18 @@
     "title": "THM - Startup (Write-Up)",
     "date": "2026-04-01",
     "read": "5 min",
-    "description": "FTP anon upload for RCE, PCAP credential reuse and privesc via writable root-executed cron script.",
+    "description": "FTP upload for RCE, PCAP credential reuse and privesc via writable root-executed cron script.",
     "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "thm-startup",
     "file": "./posts/thm-startup.md"
+  },
+  {
+    "title": "THM - Library (Write-Up)",
+    "date": "2026-04-06",
+    "read": "3 min",
+    "description": "SSH brute force with weak credentials and privesc via misconfigured sudo Python script execution.",
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "slug": "thm-library",
+    "file": "./posts/thm-library.md"
   }
 ]
