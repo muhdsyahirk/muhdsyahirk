@@ -22,7 +22,7 @@ As usual, I started with an [**Nmap**](https://www.kali.org/tools/nmap/) scan:
 
 ```bash
 nmap -T4 -p- 10.48.154.138
-sudo nmap -sCV -p 21,22,80 10.48.154.138
+sudo nmap -sCV -p 22,80 10.48.154.138
 ```
 
 ![Nmap Output](./img/thm-library/Nmap-output.png)

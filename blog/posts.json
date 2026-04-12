@@ -187,5 +187,14 @@
     "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "thm-library",
     "file": "./posts/thm-library.md"
+  },
+  {
+    "title": "THM - Team (Write-Up)",
+    "date": "2026-04-12",
+    "read": "6 min",
+    "description": "Subdomain discovery, LFI for sensitive files and privesc by abusing sudo and writable script.",
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "slug": "thm-team",
+    "file": "./posts/thm-team.md"
   }
 ]
