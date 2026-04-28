@@ -196,5 +196,14 @@
     "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
     "slug": "thm-team",
     "file": "./posts/thm-team.md"
+  },
+  {
+    "title": "THM - Ignite (Write-Up)",
+    "date": "2026-04-28",
+    "read": "3 min",
+    "description": "Fuel CMS admin:admin login, authenticated RCE and privesc via exposed root credentials.",
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "slug": "thm-ignite",
+    "file": "./posts/thm-ignite.md"
   }
 ]
