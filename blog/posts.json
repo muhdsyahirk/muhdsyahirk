@@ -31,7 +31,7 @@
     "date": "2025-12-28",
     "read": "8 min",
     "description": "Drupalgeddon exploitation and SUID binary (find) abuse for privesc.",
-    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy", "CMS"],
     "slug": "vh-dc1",
     "file": "./posts/vulnhub-dc1.md"
   },
@@ -39,8 +39,8 @@
     "title": "VulnHub - DC: 2 (Write-Up)",
     "date": "2026-02-06",
     "read": "8 min",
-    "description": "WordPress exploitation, shell escape and misconfigured sudo (git) privesc.",
-    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
+    "description": "WordPress exploitation, vi shell escape and misconfigured sudo (git) privesc.",
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy", "CMS"],
     "slug": "vh-dc2",
     "file": "./posts/vulnhub-dc2.md"
   },
@@ -49,7 +49,7 @@
     "date": "2026-02-15",
     "read": "6 min",
     "description": "Joomla SQL injection and vulnerable kernel exploitation for privesc.",
-    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy", "CMS"],
     "slug": "vh-dc3",
     "file": "./posts/vulnhub-dc3.md"
   },
@@ -58,7 +58,7 @@
     "date": "2026-02-08",
     "read": "8 min",
     "description": "Brute-force login, command execution abuse and misconfigured sudo (tee) privesc.",
-    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy", "star"],
     "slug": "vh-dc4",
     "file": "./posts/vulnhub-dc4.md"
   },
@@ -67,7 +67,7 @@
     "date": "2026-02-10",
     "read": "8 min",
     "description": "Shellshock exploitation via CGI for RCE and reverse shell, and credential reuse.",
-    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy", "CMS"],
     "slug": "vh-sickos1-1",
     "file": "./posts/vulnhub-sickos1.1.md"
   },
@@ -76,7 +76,7 @@
     "date": "2026-02-12",
     "read": "6 min",
     "description": "Web shell upload, followed by cron-based privesc via vulnerable chkrootkit execution.",
-    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy", "star"],
     "slug": "vh-sickos1-2",
     "file": "./posts/vulnhub-sickos1.2.md"
   },
@@ -85,7 +85,7 @@
     "date": "2026-02-14",
     "read": "6 min",
     "description": "PCAP analysis, SSH brute-forcing, and cron privesc through writable Python script abuse.",
-    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy", "world writable"],
     "slug": "vh-troll1",
     "file": "./posts/vulnhub-troll1.md"
   },
@@ -94,7 +94,7 @@
     "date": "2026-02-16",
     "read": "6 min",
     "description": "SQL injection, credential reuse and PATH hijacking via insecure sudo SETENV configuration.",
-    "tags": ["ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["ctf", "red", "hacking", "boot2root", "easy", "star"],
     "slug": "vh-theplanet-mercury",
     "file": "./posts/vulnhub-planet-mercury.md"
   },
@@ -103,7 +103,7 @@
     "date": "2026-02-18",
     "read": "4 min",
     "description": "SQL injection for vulnerable CMS version and privesc using vim text editor.",
-    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy", "CMS"],
     "slug": "thm-simplectf",
     "file": "./posts/thm-simplectf.md"
   },
@@ -112,7 +112,7 @@
     "date": "2026-02-24",
     "read": "5 min",
     "description": "SMB user enum, SSH brute-force, lateral movement via exposed SSH private key.",
-    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy", "CMS"],
     "slug": "thm-basicpentesting",
     "file": "./posts/thm-basicpentesting.md"
   },
@@ -121,7 +121,7 @@
     "date": "2026-02-25",
     "read": "6 min",
     "description": "Decoding, hash cracking, stego for extracting credentials and privesc via writable root cron script.",
-    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy", "star"],
     "slug": "thm-easypeasy",
     "file": "./posts/thm-easypeasy.md"
   },
@@ -130,7 +130,7 @@
     "date": "2026-02-26",
     "read": "4 min",
     "description": "Bypass restricted PHP file upload for RCE and privesc through SUID Python binary abuse.",
-    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy", "star"],
     "slug": "thm-rootme",
     "file": "./posts/thm-rootme.md"
   },
@@ -139,7 +139,7 @@
     "date": "2026-02-28",
     "read": "6 min",
     "description": "SPIP 4.2.0 unauthenticated RCE, privesc via writable root-executed script with AppArmor bypass.",
-    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy", "CMS"],
     "slug": "thm-publisher",
     "file": "./posts/thm-publisher.md"
   },
@@ -148,7 +148,7 @@
     "date": "2026-03-01",
     "read": "5 min",
     "description": "Exposed CMS backup file, file upload for RCE and privesc via writable root-executed Perl script.",
-    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy", "CMS"],
     "slug": "thm-lazyadmin",
     "file": "./posts/thm-lazyadmin.md"
   },
@@ -166,7 +166,7 @@
     "date": "2026-03-10",
     "read": "4 min",
     "description": "MagnusBilling command injection for RCE and privesc via sudo fail2ban-client abuse.",
-    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy", "CMS"],
     "slug": "thm-billing",
     "file": "./posts/thm-billing.md"
   },
@@ -202,8 +202,26 @@
     "date": "2026-04-28",
     "read": "3 min",
     "description": "Fuel CMS admin:admin login, authenticated RCE and privesc via exposed root credentials.",
-    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy"],
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy", "CMS"],
     "slug": "thm-ignite",
     "file": "./posts/thm-ignite.md"
+  },
+  {
+    "title": "THM - Dreaming (Write-Up)",
+    "date": "2026-05-09",
+    "read": "7 min",
+    "description": "Pluck CMS file upload RCE, database payload execution and Python lib hijacking for privesc.",
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy", "CMS"],
+    "slug": "thm-dreaming",
+    "file": "./posts/thm-dreaming.md"
+  },
+  {
+    "title": "THM - IDE (Write-Up)",
+    "date": "2026-05-17",
+    "read": "5 min",
+    "description": "FTP credential discovery, Codiad CMS RCE and privesc via writable systemd service file.",
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy", "CMS"],
+    "slug": "thm-ide",
+    "file": "./posts/thm-ide.md"
   }
 ]
