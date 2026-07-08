@@ -223,5 +223,14 @@
     "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy", "CMS"],
     "slug": "thm-ide",
     "file": "./posts/thm-ide.md"
+  },
+  {
+    "title": "THM - Anonforce (Write-Up)",
+    "date": "2026-06-18",
+    "read": "6 min",
+    "description": "PGP passphrase cracking, decrypted PGP, password hash cracking and SSH access as root.",
+    "tags": ["tryhackme", "ctf", "red", "hacking", "boot2root", "easy", "star"],
+    "slug": "thm-anonforce",
+    "file": "./posts/thm-anonforce.md"
   }
 ]
